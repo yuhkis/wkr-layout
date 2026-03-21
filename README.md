@@ -113,7 +113,7 @@ Additionally, each consonant key immediately produces the あ-column kana of its
 | `S` `U` | しゃ | さ行 + 拗あ |
 | `F` `O` | ちょ | た行 + 招お |
 | `Q` `K` | ぎ | が行 + い段 |
-| `□` `H` | ぁ | 小書きレイヤー (T→あ段) |
+| `□` `H` | ぁ | 小書きレイヤー (T→H) |
 | `E` `Y` | ヶ | か行 + 特殊 (Y) |
 | `W` `Y` | ゎ | わ行 + 特殊 (Y) |
 | `W` `I` | ゑ | わ行 + ゆ列 |
@@ -123,19 +123,27 @@ Additionally, each consonant key immediately produces the あ-column kana of its
 
 ---
 
+## ダウンロード / Download
+
+👉 **[最新版をダウンロード / Download Latest Release](https://github.com/yuhkis/wkr-layout/releases/latest)**
+
+---
+
 ## インストール / Installation
 
 ### Google 日本語入力 / Google Japanese Input
 
-1. Google 日本語入力の「プロパティ」を開く / Open Google Japanese Input "Properties"
-2. 「一般」タブ →「ローマ字テーブル」→「編集」→「インポート」 / "General" tab → "Romaji table" → "Edit" → "Import"
-3. `google-japanese-input/romantable.txt` を選択 / Select `google-japanese-input/romantable.txt`
+1. [Releaseページ](https://github.com/yuhkis/wkr-layout/releases/latest)から `romantable.txt` をダウンロード / Download `romantable.txt` from the [Release page](https://github.com/yuhkis/wkr-layout/releases/latest)
+2. Google 日本語入力の「プロパティ」を開く / Open Google Japanese Input "Properties"
+3. 「一般」タブ →「ローマ字テーブル」→「編集」→「インポート」 / "General" tab → "Romaji table" → "Edit" → "Import"
+4. ダウンロードした `romantable.txt` を選択 / Select the downloaded `romantable.txt`
 
 ### azooKey (macOS)
 
-1. azooKeyの入力方式を「カスタム」に設定 / Set azooKey input method to "Custom"
-2. 「編集」→「ファイルに書き出し」で `custom_input_table.tsv` の保存場所を確認 / "Edit" → "Export to file" to locate `custom_input_table.tsv`
-3. 書き出された `custom_input_table.tsv` を本リポジトリの `azookey/custom_input_table.tsv` の内容で差し替え / Replace the exported `custom_input_table.tsv` with `azookey/custom_input_table.tsv` from this repository
+1. [Releaseページ](https://github.com/yuhkis/wkr-layout/releases/latest)から `custom_input_table.tsv` をダウンロード / Download `custom_input_table.tsv` from the [Release page](https://github.com/yuhkis/wkr-layout/releases/latest)
+2. azooKeyの入力方式を「カスタム」に設定 / Set azooKey input method to "Custom"
+3. 「編集」→「ファイルに書き出し」で `custom_input_table.tsv` の保存場所を確認 / "Edit" → "Export to file" to locate `custom_input_table.tsv`
+4. 書き出された `custom_input_table.tsv` をダウンロードしたファイルで差し替え / Replace the exported file with the downloaded `custom_input_table.tsv`
 
 ---
 
