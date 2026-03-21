@@ -51,7 +51,7 @@ Additionally, each consonant key immediately produces the あ-column kana of its
 
 ---
 
-## キーマッㅗ / Keymap
+## キーマップ/ Keymap
 
 ### 子音キー（行選択） / Consonant Keys (Row Selection)
 
