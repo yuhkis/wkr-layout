@@ -55,7 +55,7 @@ Standard QWERTY romaji input places disproportionate strain on the right wrist. 
 | ローマ字入力 | あ い う え お（5文字） |
 | **わから配列** | **あ い う え お や ゆ よ ん っ ー**（11文字）|
 
-さらに、子音キー1打で行の先頭（あ段）も即時確定するため、か さ た な は ま ら わ が ざ だ ば ぱ ふぁ も実質1打鍵です。
+さらに、子音キー1打で行の先頭（あ段）も即時確定するため、**か さ た な は ま ら わ が ざ だ ば ぱ ふぁ も実質1打鍵**です。
 
 ---
 
@@ -63,7 +63,7 @@ Compared to standard romaji, **many more characters are produced with a single k
 
 In romaji, only **5 characters** (あいうえお) resolve in one keystroke. With Wakara Layout, **11 characters** resolve in one keystroke: あ い う え お や ゆ よ ん っ ー.
 
-Additionally, each consonant key immediately produces the あ-column kana of its row, so か さ た な は ま ら わ が ざ だ ば ぱ ふぁ are also effectively single-keystroke inputs.
+Additionally, each consonant key immediately produces the あ-column kana of its row, so **か さ た な は ま ら わ が ざ だ ば ぱ ふぁ are also effectively single-keystroke inputs**.
 
 ---
 
