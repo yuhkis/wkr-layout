@@ -55,7 +55,7 @@ Standard QWERTY romaji input places disproportionate strain on the right wrist. 
 | ローマ字入力 | あ い う え お（5文字） |
 | **わから配列** | **あ い う え お や ゆ よ ん っ ー**（11文字）|
 
-さらに、子音キー1打で行の先頭（あ段）も即時確定するため、**か さ た な は ま ら わ が ざ だ ば ぱ ふぁ も実質1打鍵**です。
+さらに、子音キー1打で行の先頭（あ段）も即時確定するため、か さ た な は ま ら わ が ざ だ ば ぱ ふぁ も実質1打鍵です。
 
 ---
 
@@ -63,7 +63,7 @@ Compared to standard romaji, **many more characters are produced with a single k
 
 In romaji, only **5 characters** (あいうえお) resolve in one keystroke. With Wakara Layout, **11 characters** resolve in one keystroke: あ い う え お や ゆ よ ん っ ー.
 
-Additionally, each consonant key immediately produces the あ-column kana of its row, so **か さ た な は ま ら わ が ざ だ ば ぱ ふぁ are also effectively single-keystroke inputs**.
+Additionally, each consonant key immediately produces the あ-column kana of its row, so か さ た な は ま ら わ が ざ だ ば ぱ ふぁ are also effectively single-keystroke inputs.
 
 ---
 
@@ -216,6 +216,10 @@ Vowels are mapped to the right-hand home row (`H`=あ, `J`=う, `K`=い, `L`=お
 2. azooKeyの入力方式を「カスタム」に設定 / Set azooKey input method to "Custom"
 3. 「編集」→「ファイルに書き出し」で `custom_input_table.tsv` の保存場所を確認 / "Edit" → "Export to file" to locate `custom_input_table.tsv`
 4. 書き出された `custom_input_table.tsv` をダウンロードしたファイルで差し替え / Replace the exported file with the downloaded `custom_input_table.tsv`
+
+> **⚠️ azooKeyの注意点：** Google日本語入力では子音キーを押した時点で変換候補が表示されます（例：`w` → 「わ」）が、azooKeyでは途中経過が表示されず `w` のまま表示されます。次の文字（例：`。`）を入力すれば正しく「わ」に変換されますが、**文末で何も入力せずにEnterを押すと `w` のまま確定されてしまいます。** 文末では句読点や次の文字を入力してから確定してください。
+>
+> **⚠️ Note for azooKey:** Google Japanese Input shows kana conversion immediately when a consonant key is pressed (e.g., `w` → "わ"), but azooKey displays the raw consonant (e.g., `w`) without showing the intermediate kana. Typing the next character (e.g., "。") will correctly resolve it, but **pressing Enter at the end of a sentence without additional input will commit the raw consonant as-is.** Always type punctuation or the next character before confirming at the end of a line.
 
 ---
 
