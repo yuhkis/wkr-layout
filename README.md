@@ -1,8 +1,8 @@
 # わから配列 / Wakara Layout (wkr)
 
-> `w` `k` `r` と打つだけで「わから」と入力できます。配列名がそのまま配列のデモです。
+> `w` `e` `r` と打つだけで「わから」と入力できます（`w`=わ行、`e`=か行、`r`=ら行）。配列名 **wkr** は「**w**a-**k**a-**r**a」の略です。
 >
-> Type `w` `k` `r` to input "わから" — the layout name itself is a demo.
+> Type `w` `e` `r` to input "わから" (`w`=Wa, `e`=Ka, `r`=Ra). The name **wkr** stands for **w**a-**k**a-**r**a.
 
 **わから配列**は、[きゅうり改](https://www.itmedia.co.jp/enterprise/articles/0704/24/news006_2.html)をベースに大幅に改良した、ローマ字入力ベースの日本語かな入力配列です。子音キー＋母音キーの2打鍵で1つのかなを入力します。
 
