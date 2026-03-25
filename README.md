@@ -26,9 +26,9 @@ Select a consonant row with the left hand, then type a vowel column with the rig
 
 ## 背景 / Background
 
-QWERTYローマ字入力では右手首への負担が大きく、長時間の入力で疲労が蓄積します。わから配列は、この問題を解消するために設計しました。
+QWERTYローマ字入力では右手首への負担が大きく、長時間の入力で疲労が蓄積します。わから配列は、この問題を解消するために設計しました。ver 0.2 の完成は 2018年で、作者自身が約8年間日常的に使い続けています。
 
-Standard QWERTY romaji input places disproportionate strain on the right wrist. Wakara Layout was designed to address this problem.
+Standard QWERTY romaji input places disproportionate strain on the right wrist. Wakara Layout was designed to address this problem. Version 0.2 was completed in 2018, and the author has been using it daily for about 8 years.
 
 ---
 
