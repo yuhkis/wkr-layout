@@ -13,7 +13,7 @@
 ## 配列図 / Layout Diagram
 
 ```
-[が][わ]　[か][ら][□ ]　[■ ] や  ゆ  よ  ー　「  」
+[が][わ]　[か][ら][□] 　[■] や  ゆ  よ  ー　「  」
 [ぱ][さ]　[な][た][は]　 あ  う  い  お  え　'  ￥
 [ざ][ふぁ][だ][ま][ば]　 ん  っ  ，  ．  ・　｀
 ```
@@ -107,7 +107,7 @@ Vowels are mapped to the right-hand home row (`H`=あ, `J`=う, `K`=い, `L`=お
 
 - 左右交互入力が基本です
 - 拗音を2押下で入力可能です
-- 「ん」「っ」に独立キーを割り彟てています
+- 「ん」「っ」に独立キーを割り当てています
 
 ### かな入力に対して
 
@@ -182,7 +182,7 @@ Vowels are mapped to the right-hand home row (`H`=あ, `J`=う, `K`=い, `L`=お
 | `F` `J` | つ | た行 + う段 |
 | `D` `;` | ね | な行 + え段 |
 | `G` `L` | ほ | は行 + お段 |
-| `S` `U` | しょ | さ行 + 拗あ |
+| `S` `U` | しゃ | さ行 + 拗あ |
 | `F` `O` | ちょ | た行 + 拗お |
 | `Q` `K` | ぎ | が行 + い段 |
 | `□` `H` | ぁ | 小書きレイヤー (T→H) |
@@ -217,7 +217,7 @@ Vowels are mapped to the right-hand home row (`H`=あ, `J`=う, `K`=い, `L`=お
 3. 「編集」→「ファイルに書き出し」で `custom_input_table.tsv` の保存場所を確認 / "Edit" → "Export to file" to locate `custom_input_table.tsv`
 4. 書き出された `custom_input_table.tsv` をダウンロードしたファイルで差し替え / Replace the exported file with the downloaded `custom_input_table.tsv`
 
-> **⚠️ azooKeyの注意点：** Google日本語入力では子音キーを押した時点で変換候補が表示されます（例：`w` → 「わ」）が、azooKeyでは途中経過が表示されず `w` のまま表示されます。次の文字（例：`。`）を入力するか、スペースキーで変換すれば正しく「わ」に変換されますが、**文末で何も入力せずにEnterを押すと `w` のまま確定されてしまいます。** 文末ではスペースで変換するか、句読点や次の文字を入力してから確定してください。
+> **⚠️ azooKeyの注意点：** Google日本語入力では子音キーを押した時点で変換候補が表示されます（例：`w` → 「わ」）が、azooKeyでは途中経過が表示されず `w` のまま表示されます。次の文字（例：`。`）を入力するか、スペースキーで変換すれば正しく「わ」に変揖されますが、**文末で何も入力せずにEnterを押すと `w` のまま確定されてしまいます。** 文末ではスペースで変換するか、句読点や次の文字を入力してから確定してください。
 >
 > **⚠️ Note for azooKey:** Google Japanese Input shows kana conversion immediately when a consonant key is pressed (e.g., `w` → "わ"), but azooKey displays the raw consonant (e.g., `w`) without showing the intermediate kana. Typing the next character (e.g., "。") or pressing Space to convert will correctly resolve it, but **pressing Enter at the end of a sentence without additional input will commit the raw consonant as-is.** Always press Space to convert, or type punctuation or the next character before confirming at the end of a line.
 
