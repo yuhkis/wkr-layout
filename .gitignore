@@ -1,0 +1,6 @@
+build/
+output/
+__pycache__/
+.DS_Store
+WORKLOG.md
+AGENTS.local.md
