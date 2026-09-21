@@ -35,4 +35,6 @@ node --test practice/core.test.cjs
 
 MIT License — [LICENSE](LICENSE)。背景と従来版の説明は[v1資料](docs/v1.md)に残しています。
 
-配布候補は `python3 scripts/package.py` でcleanなcommitから作成します。[検証記録](docs/verification.md)と[公開前監査](docs/publication-audit.md)の未確認・保留事項を先に確認してください。
+配布候補は `python3 scripts/package.py` でcleanなcommitから `build/distribution/<commit>/` へ作成します。配列・教材の版は変更せず、未公開の文書更新候補はcommitとSHA256で区別します。公開済みの配布物は置き換えません。[検証記録](docs/verification.md)と[公開前監査](docs/publication-audit.md)の未確認・保留事項を先に確認してください。
+
+公開作業を始めるときは `python3 scripts/publication_guard.py install` で、このリポジトリだけのpush前ガードを設置します。接続先のrepository IDと監査済みの内容に対する承認が揃うまではpushを拒否します。[公開前監査](docs/publication-audit.md)に監査と承認記録の手順があります。
