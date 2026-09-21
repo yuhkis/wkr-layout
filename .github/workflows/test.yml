@@ -26,3 +26,5 @@ jobs:
           python3 scripts/generate.py --check
           python3 -m unittest discover -s tests
           node --test practice/core.test.cjs
+      - name: Build the historical v1.1 archive
+        run: python3 scripts/package-v1-archive.py
