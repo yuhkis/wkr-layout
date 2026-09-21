@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "repository": "yuhkis/wkr-layout",
+  "root": "ecbf634555bcbd4cbb87fcc62d0a6d15feb2f703",
+  "authors": [
+    "yuhkis",
+    "Yuhki Shiraishi",
+    "GitHub"
+  ],
+  "emails": [
+    "3623400+yuhkis@users.noreply.github.com",
+    "noreply@github.com",
+    "yuhkis@users.noreply.github.com"
+  ],
+  "paths": [
+    ".github/workflows/test.yml",
+    ".gitignore",
+    ".publication-policy.json",
+    "AGENTS.md",
+    "LICENSE",
+    "README.md",
+    "azookey/custom_input_table.tsv",
+    "data/layout-v2.json",
+    "docs/compatibility.md",
+    "docs/layout-v2.md",
+    "docs/publication-audit.md",
+    "docs/release-2.0.0-beta.1.md",
+    "docs/v1.md",
+    "docs/verification.md",
+    "google-japanese-input/romantable.txt",
+    "practice/README.md",
+    "practice/VERSION",
+    "practice/app.js",
+    "practice/core.js",
+    "practice/core.test.cjs",
+    "practice/data.js",
+    "practice/index.html",
+    "practice/lessons.json",
+    "practice/style.css",
+    "scripts/README.md",
+    "scripts/generate.py",
+    "scripts/package.py",
+    "scripts/publication_guard.py",
+    "scripts/test_publication_guard.py",
+    "tests/test_layout.py",
+    "v2/azookey/custom_input_table.tsv",
+    "v2/google-japanese-input/romantable.txt"
+  ],
+  "binary_archive_members": [],
+  "text_emails": [
+    "git@github.com"
+  ]
+}

@@ -9,7 +9,7 @@ practice=(root/'practice/VERSION').read_text().strip()
 if subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True).strip():
     raise SystemExit('Commit and review public sources before packaging')
 revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
-out=root/'build';out.mkdir(exist_ok=True)
+out=root/'build/distribution'/revision;out.mkdir(parents=True,exist_ok=True)
 groups={f'wakara-layout-{layout}.zip':['LICENSE','README.md','docs/layout-v2.md','docs/compatibility.md','docs/verification.md','docs/publication-audit.md','docs/v1.md','docs/release-2.0.0-beta.1.md','practice/README.md','scripts/README.md','data/layout-v2.json','google-japanese-input/romantable.txt','azookey/custom_input_table.tsv','v2/google-japanese-input/romantable.txt','v2/azookey/custom_input_table.tsv'],f'wakara-practice-{practice}.zip':['LICENSE']+['practice/'+n for n in ['index.html','style.css','data.js','core.js','app.js','README.md','VERSION']]}
 distribution_readme='''# わから配列 2.0.0-beta.1
 

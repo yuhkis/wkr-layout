@@ -1,20 +1,28 @@
 name: test
+
 on:
   push:
     branches: [main]
   pull_request:
   workflow_dispatch:
+
+permissions:
+  contents: read
+
 jobs:
-  layout-practice:
+  layout-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - run: python3 scripts/generate.py --check
-      - run: python3 -m unittest discover -s tests
-      - run: node --test practice/core.test.cjs
+          fetch-depth: 0
+      - name: Inspect every reachable public ref
+        run: |
+          git fetch origin '+refs/heads/*:refs/remotes/origin/*' '+refs/pull/*/head:refs/remotes/origin/pr/*' --tags --quiet
+          python3 scripts/publication_guard.py audit --report "$RUNNER_TEMP/publication-audit.json"
+          python3 scripts/test_publication_guard.py
+      - name: Check generated layout and practice
+        run: |
+          python3 scripts/generate.py --check
+          python3 -m unittest discover -s tests
+          node --test practice/core.test.cjs
