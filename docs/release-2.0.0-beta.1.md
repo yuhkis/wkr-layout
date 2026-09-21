@@ -6,4 +6,6 @@
 
 添付: `wakara-layout-2.0.0-beta.1.zip`、`wakara-practice-0.1.0.zip`、`SHA256SUMS`。練習版は独立して管理し、将来の教材更新時に配列版を流用しません。
 
-Google日本語入力・azooKeyの実IME確認とmacOS実機入力確認は未完了です。[検証記録](verification.md)を参照してください。v1.1の利用者は[v2の対応と違い](compatibility.md)を確認し、旧テーブルの控えを取ってから切り替えてください。
+macOSで使用する対応アプリは **[WKR macOS Public 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5)** です。Apple日本語入力と組み合わせて使い、同じ練習帳0.1.0を同梱しています。
+
+WKR macOS Publicでは、beta.1で権限付与と短い日本語の実変換、beta.2で同梱練習の課題・配列図表示を確認済みです。beta.5にも同じ変換処理・教材を引き継いでいます。beta.5そのものの実機入力・停止復帰の再確認と、Google日本語入力・azooKeyのv2テーブルのインポート・実入力は未完了です。[検証記録](verification.md)を参照してください。v1.1の利用者は[v2の対応と違い](compatibility.md)を確認し、旧テーブルの控えを取ってから切り替えてください。

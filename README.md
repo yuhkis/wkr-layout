@@ -9,7 +9,7 @@
 
 1. [練習アプリ](practice/index.html)をダウンロードしたフォルダのままブラウザで開きます。インストール・通信なしでキー位置を練習できます。英字入力にして「キー位置の練習」を選んでください。
 2. [配列表](docs/layout-v2.md)で基本キーを確認します。練習は母音・行キーから短文へ進みます。
-3. 実際の文章入力には [WKR macOS Public](https://github.com/yuhkis/wkr-macos) とApple日本語入力を使います。[実装の違い](docs/compatibility.md)も確認してください。
+3. 実際の文章入力には [WKR macOS Public 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) とApple日本語入力を使います。[実装の違い](docs/compatibility.md)も確認してください。
 
 練習アプリは既定では成績を保存しません。「成績をこの端末に保存」を有効にした場合だけ課題別の完了回数・最高正答率を保存します。入力本文・誤入力・キー列・時刻は保存しません。[保存と削除](practice/README.md)を参照してください。
 
@@ -23,6 +23,8 @@
 ## v1の記録
 
 v1系の最終版の説明・配列表・IMEテーブルは、[v1.1.0 保存資料のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v1.1.0-archive.1)にまとめています。旧v1.1.0のGoogle日本語入力・azooKeyテーブルを変更せずに収録し、[v1の資料](docs/v1.md)でv1.0からの変更履歴も参照できます。
+
+対応するmacOS実装は[WKR macOS 0.7.0 保存ソース](https://github.com/yuhkis/wkr-macos/releases/tag/v0.7.0-archive.1)です。
 
 保存資料のタグは `v1.1.0-archive.1`、配列の版は `1.1.0` です。アプリ・練習は含みません。現行WKR macOS Publicと練習帳はv2用です。
 

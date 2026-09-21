@@ -3,9 +3,10 @@
 | 対象 | 配列版 | 状態 |
 | --- | --- | --- |
 | このリポジトリのJSON・配列表 | 2.0.0-beta.1 | 正本、233規則 |
-| WKR macOS Public | アプリ0.8.0-public.beta.1 / 配列2.0.0-beta.1 | 固定commitから生成。Apple日本語入力の前段 |
+| [WKR macOS Public 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) | アプリ0.8.0-public.beta.5 / 配列2.0.0-beta.1 | 固定commitから生成。Apple日本語入力の前段 |
 | 練習アプリ | アプリ0.1.0 / 配列2.0.0-beta.1 | ブラウザと同梱版で同一教材 |
 | v2/ のGoogle日本語入力・azooKey | 2.0.0-beta.1 | 生成・構造検査済み、実IME未確認 |
+| [WKR macOS 0.7.0 保存ソース](https://github.com/yuhkis/wkr-macos/releases/tag/v0.7.0-archive.1) | 保存版0.7.0-archive.1 / 配列1.1.0 | v1用。現行Public v2とは別 |
 | ルート直下の旧IMEテーブル | 1.1.0 | 旧版の保全。v2導入には使わない |
 
 v1から、が行はA、ぱ行はT、小書きはQ、よ列はI、ゆ列はO、長音はY、んはM、っはN、記号前置はPへ変わりました。`/` は疑問符、Shift+/ は中点です。Q単打はぁ、QPはゎです。WJに母音・拗音列を続けるとゔ行になります。

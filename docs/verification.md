@@ -28,3 +28,11 @@
 ## 公開操作の回帰検査
 
 2026-09-21、`python3 scripts/test_publication_guard.py` の15件が成功しました。合成の一時Gitで、削除済み連絡先の過去履歴、他のroot、未許可パス・identity、監査後のcommit/tag/配布物変更、別URL・repository ID、mainへの付け替え、非fast-forwardを拒否します。実際のpre-push hookが未承認のpushを拒否し、試験用の宛先へrefを送らないことも確認しました。検査は内容を読む公開前監査と併用します。
+
+## 2026-09-21 — macOS対応版と実機確認範囲の補足
+
+対応アプリは[WKR macOS Public 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5)です。配列2.0.0-beta.1と練習帳0.1.0を使います。
+
+Public beta.1で権限付与と短い日本語の実変換、beta.2で同梱練習の課題と配列図表示を利用者が確認しています。macOSでの確認実績がすべて未了という意味ではありません。beta.5は同じ変換処理・教材を引き継いでいますが、この配布版そのものの実機入力・停止復帰は再確認待ちです。[アプリ側の検証記録](https://github.com/yuhkis/wkr-macos/blob/main/docs/verification.md)に版ごとの範囲を記載しています。
+
+Google日本語入力とazooKeyのテーブルは別の入力経路です。Apple日本語入力とWKRの実変換を、これらのテーブルの実IME確認として扱いません。
