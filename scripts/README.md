@@ -8,6 +8,14 @@
 
 仕様zipにはv2と区別したv1.1の保全テーブルも同梱し、以前のReleaseへのアクセスを必要としません。
 
+## v1.1の保存資料を作る
+
+`python3 scripts/package-v1-archive.py` はcleanなcommitから、v1.1の説明・配列表・二つのIMEテーブル・LICENSEだけを固定リストでzipにします。アプリ・練習・Git履歴は収録しません。テーブルのSHA256は旧v1.1.0と照合済みの値に固定し、変更されていたら生成を止めます。
+
+出力先は `build/distribution/v1.1.0-archive.1/<commit>/`。`manifest.json` に配列版・保存資料版・ソースcommit・収録ファイルのSHA256を記録し、zipとmanifestのハッシュを `SHA256SUMS` に書きます。同じcommitの既存ファイルと内容が違えば上書きを拒否し、同じならそのまま使います。
+
+旧v1.1.0のタグや配列内容は変更しません。保存資料の更新時はarchive番号を上げ、公開済みの添付を置き換えません。v2・練習の配布は従来の `package.py` を使います。
+
 ## 公開操作のガード
 
 `publication_guard.py` はPython標準ライブラリとGitを使います。GitHubの接続先照合には認証済みの`gh`が必要です。新しい公開作業場だけに `python3 scripts/publication_guard.py install` で設置します。global設定やPrivateの作業場には適用しません。

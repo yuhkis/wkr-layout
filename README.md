@@ -20,6 +20,12 @@
 - [v1からの変更・既知の差](docs/compatibility.md)。v1.1資料は[保存版](docs/v1.md)、ルート直下のIMEテーブルはv1.1のままです。仕様zipにも同梱し、以前のReleaseへアクセスせず参照できます。v2と混在させないでください。
 - 配列版と練習版は独立しています。WKR macOSは別リポジトリ・別バージョンです。同じ版名の内容は差し替えず、変更時は版を上げます。
 
+## v1の記録
+
+v1系の最終版の説明・配列表・IMEテーブルは、[v1.1.0 保存資料のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v1.1.0-archive.1)にまとめています。旧v1.1.0のGoogle日本語入力・azooKeyテーブルを変更せずに収録し、[v1の資料](docs/v1.md)でv1.0からの変更履歴も参照できます。
+
+保存資料のタグは `v1.1.0-archive.1`、配列の版は `1.1.0` です。アプリ・練習は含みません。現行WKR macOS Publicと練習帳はv2用です。
+
 ## 開発
 
 Python 3（標準ライブラリのみ）で生成・検査できます。
@@ -40,3 +46,5 @@ MIT License — [LICENSE](LICENSE)。背景と従来版の説明は[v1資料](do
 配布候補は `python3 scripts/package.py` でcleanなcommitから `build/distribution/<commit>/` へ作成します。配列・教材の版は変更せず、未公開の文書更新候補はcommitとSHA256で区別します。公開済みの配布物は置き換えません。[検証記録](docs/verification.md)と[公開前監査](docs/publication-audit.md)の未確認・保留事項を先に確認してください。
 
 公開作業を始めるときは `python3 scripts/publication_guard.py install` で、このリポジトリだけのpush前ガードを設置します。接続先のrepository IDと監査済みの内容に対する承認が揃うまではpushを拒否します。[公開前監査](docs/publication-audit.md)に監査と承認記録の手順があります。
+
+v1.1の保存用配布物は `python3 scripts/package-v1-archive.py` で作成します。固定した旧テーブルのSHA256を検査し、`build/distribution/v1.1.0-archive.1/<commit>/` にzip・manifest・SHA256SUMSを出力します。詳細は [scripts/README.md](scripts/README.md) を参照してください。
