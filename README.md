@@ -1,13 +1,15 @@
 # わから配列 v2 — 公開ベータ
 
 左手で行を、右手で段を選ぶ日本語入力配列です。`W E R` + Enter で「わから」、`E K` で「き」になります。
-このリポジトリが配列仕様と練習教材の正本です。**配列 2.0.0-beta.1 / 練習 0.1.0** を公開ベータとして提供します。
+このリポジトリが配列仕様と練習教材の正本です。**配列 2.0.0-beta.1 / Web練習帳 0.2.0** を提供します。
 
-[仕様・練習の配布zipとSHA256SUMS](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.1)を公式Releaseから入手できます。
+**[ブラウザでわから配列を体験する](https://yuhkis.github.io/wkr-layout/)** — アプリのインストール不要。ABC・英数で、いつものQWERTYキーボードから試せます。
+
+[配列2.0.0-beta.1の配布zipとSHA256SUMS](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.1)は公式Releaseにあります。この既存Releaseと公開済みmacOSアプリには練習帳0.1.0を同梱しています。Web練習帳0.2.0ではQWERTY体験を追加しました。
 
 ## 初めて使う方へ
 
-1. [練習アプリ](practice/index.html)をダウンロードしたフォルダのままブラウザで開きます。インストール・通信なしでキー位置を練習できます。英字入力にして「キー位置の練習」を選んでください。
+1. [ブラウザデモ](https://yuhkis.github.io/wkr-layout/)を開き、ABC・英数に切り替えて「QWERTYで体験」を選びます。Hで「あ」、E→Kで「き」を入力できます。WKR導入済みの方は「WKR・IMEで練習」を選び、普段のひらがな入力でも練習できます。
 2. [配列表](docs/layout-v2.md)で基本キーを確認します。練習は母音・行キーから短文へ進みます。
 3. 実際の文章入力には [WKR macOS v2 Public Beta 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) とApple日本語入力を使います。[実装の違い](docs/compatibility.md)も確認してください。
 
@@ -36,7 +38,7 @@ Python 3（標準ライブラリのみ）で生成・検査できます。
 python3 scripts/generate.py
 python3 scripts/generate.py --check
 python3 -m unittest discover -s tests
-node --test practice/core.test.cjs
+node --test practice/*.test.cjs
 ```
 
 使い方と構成は [scripts/README.md](scripts/README.md)、教材とブラウザ版は [practice/README.md](practice/README.md)へ。
@@ -45,8 +47,18 @@ node --test practice/core.test.cjs
 
 MIT License — [LICENSE](LICENSE)。背景と従来版の説明は[v1資料](docs/v1.md)に残しています。
 
-配布候補は `python3 scripts/package.py` でcleanなcommitから `build/distribution/<commit>/` へ作成します。配列・教材の版は変更せず、未公開の文書更新候補はcommitとSHA256で区別します。公開済みの配布物は置き換えません。[検証記録](docs/verification.md)と[公開前監査](docs/publication-audit.md)の未確認・保留事項を先に確認してください。
+練習帳ZIPは `python3 scripts/package.py` でcleanなcommitから `build/distribution/<commit>/` へ作成します。Webサイトは `python3 scripts/package-site.py` で固定の9ファイルだけを `build/site/<commit>/public/` と `site.zip` へ生成します。公開済みの配布物は置き換えません。[検証記録](docs/verification.md)と[公開前監査](docs/publication-audit.md)の未確認・保留事項を先に確認してください。
 
 公開作業を始めるときは `python3 scripts/publication_guard.py install` で、このリポジトリだけのpush前ガードを設置します。接続先のrepository IDと監査済みの内容に対する承認が揃うまではpushを拒否します。[公開前監査](docs/publication-audit.md)に監査と承認記録の手順があります。
 
 v1.1の保存用配布物は `python3 scripts/package-v1-archive.py` で作成します。固定した旧テーブルのSHA256を検査し、`build/distribution/v1.1.0-archive.1/<commit>/` にzip・manifest・SHA256SUMSを出力します。詳細は [scripts/README.md](scripts/README.md) を参照してください。
+
+## 個人情報を入れない継続設定
+
+公開作業では毎回、専用Gitに `python3 scripts/publication_guard.py install --repository-id ID` で検査を設置します。pre-commitは作業ファイルではなくstage済みの全ファイルと著者情報、commit-msgは本文を検査し、許可外メール・ローカルパス・秘密情報・私的記録を含むcommitを拒否します。既存のpre-pushも維持します。未設置・検査失敗・由来不明は公開停止とし、`--no-verify`やhookの無効化で回避しません。
+
+`check-index` で同じ検査を手動実行できます。`check-assets --file PATH` は生成したZIP・本文を検査しますが、アップロード承認にはなりません。Pagesも `authorize --operation pages` と `check-upload --operation pages --file PATH` の対象です。アプリ・サイトは固定の収録リストから作り、実データ・個人設定・監査原記録をコピーしません。検出語はログへ出しません。自動検査に加えて出所と内容を確認し、未検出を「個人情報ゼロ」の証明とは扱いません。
+
+## Webデモの公開
+
+公開先は https://yuhkis.github.io/wkr-layout/ 。GitHub PagesはGitHub Actions方式で配信します。公開するmainのcommitからサイトを生成・監査し、手動workflowに `site_sha256` を指定すると、同じ内容のサイトだけを配信します。pushやPRではサイトを自動公開しません。手順は[scripts/README.md](scripts/README.md)を参照してください。

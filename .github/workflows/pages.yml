@@ -1,0 +1,46 @@
+name: Publish reviewed practice site
+on:
+  workflow_dispatch:
+    inputs:
+      site_sha256:
+        description: SHA256 of the reviewed site.zip for this exact workflow ref
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Validate reviewed source and exact site bytes
+        env:
+          REVIEWED_SITE_SHA256: ${{ inputs.site_sha256 }}
+        run: |
+          git fetch origin '+refs/heads/*:refs/remotes/origin/*' '+refs/pull/*/head:refs/remotes/origin/pr/*' --tags --quiet
+          python3 scripts/generate.py --check
+          python3 -m unittest discover -s tests
+          node --test practice/*.test.cjs
+          python3 scripts/package-site.py --expect-sha256 "$REVIEWED_SITE_SHA256"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: build/site/${{ github.sha }}/public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

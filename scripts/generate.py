@@ -66,7 +66,8 @@ def practice_data():
     for row in ['qwertyuiop','asdfghjkl;','zxcvbnm,./']:
         legends.append([{'key':k,'label':BY_KEYS[(k,)]['output'] if (k,) in BY_KEYS else ('記号' if k=='p' else '通過')} for k in row])
     return dict(schemaVersion=1,layoutVersion=SPEC['version'],practiceVersion=VERSION,
-                layoutSHA256=hashlib.sha256(SPEC_PATH.read_bytes()).hexdigest(),lessons=lessons,keyboard=legends)
+                layoutSHA256=hashlib.sha256(SPEC_PATH.read_bytes()).hexdigest(),lessons=lessons,keyboard=legends,
+                rules=[dict(keys=r['keys'],output=r['output']) for r in RULES])
 
 SHIFT=dict(zip(['Shift+'+str(i) for i in range(1,10)],list('!"#$%&\'()')))
 SHIFT.update({'Shift+-':'=','Shift+;':'+','Shift+@':'`','Shift+^':'~','Shift+,':'<','Shift+.':'>','Shift+/':'?', 'Shift+[':'{','Shift+]':'}','JIS-_':'_','JIS-Yen':'\\','Shift+JIS-Yen':'|'})

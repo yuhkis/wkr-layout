@@ -25,6 +25,11 @@ jobs:
         run: |
           python3 scripts/generate.py --check
           python3 -m unittest discover -s tests
-          node --test practice/core.test.cjs
+          node --test practice/*.test.cjs
       - name: Build the historical v1.1 archive
         run: python3 scripts/package-v1-archive.py
+
+      - name: Build and inspect only the static site and practice archive
+        run: |
+          python3 scripts/package-site.py
+          python3 scripts/package.py
