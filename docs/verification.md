@@ -31,8 +31,13 @@
 
 ## 2026-09-21 — macOS対応版と実機確認範囲の補足
 
-対応アプリは[WKR macOS Public 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5)です。配列2.0.0-beta.1と練習帳0.1.0を使います。
+対応アプリは[WKR macOS v2 beta 0.8.0-beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-beta.5)です。配列2.0.0-beta.1と練習帳0.1.0を使います。
 
 Public beta.1で権限付与と短い日本語の実変換、beta.2で同梱練習の課題と配列図表示を利用者が確認しています。macOSでの確認実績がすべて未了という意味ではありません。beta.5は同じ変換処理・教材を引き継いでいますが、この配布版そのものの実機入力・停止復帰は再確認待ちです。[アプリ側の検証記録](https://github.com/yuhkis/wkr-macos/blob/main/docs/verification.md)に版ごとの範囲を記載しています。
 
 Google日本語入力とazooKeyのテーブルは別の入力経路です。Apple日本語入力とWKRの実変換を、これらのテーブルの実IME確認として扱いません。
+
+
+## 2026-09-22 — 対応アプリのRelease名
+
+対応アプリへのリンクを `v0.8.0-beta.5` に統一しました。旧 `v0.8.0-public.beta.5` と同じ公開コミットを参照する名称整理です。アプリ内の旧版表示、配列・教材、配布ファイル、以前の検証範囲は保持します。
