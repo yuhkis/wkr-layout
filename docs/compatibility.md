@@ -3,7 +3,7 @@
 | 対象 | 配列版 | 状態 |
 | --- | --- | --- |
 | このリポジトリのJSON・配列表 | 2.0.0-beta.1 | 正本、233規則 |
-| [WKR macOS v2 beta 0.8.0-beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-beta.5) | Release 0.8.0-beta.5 / 配列2.0.0-beta.1 | 固定commitから生成。Apple日本語入力の前段 |
+| [WKR macOS v2 Public Beta 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) | アプリ0.8.0-public.beta.5 / 配列2.0.0-beta.1 | 固定commitから生成。Apple日本語入力の前段 |
 | 練習アプリ | アプリ0.1.0 / 配列2.0.0-beta.1 | ブラウザと同梱版で同一教材 |
 | v2/ のGoogle日本語入力・azooKey | 2.0.0-beta.1 | 生成・構造検査済み、実IME未確認 |
 | [WKR macOS 0.7.0 保存ソース](https://github.com/yuhkis/wkr-macos/releases/tag/v0.7.0-archive.1) | 保存版0.7.0-archive.1 / 配列1.1.0 | v1用。現行Public v2とは別 |
@@ -17,4 +17,4 @@ WKR macOSはJISの物理キーコードを基準にし、通常かなはロー�
 
 練習の「キー位置」は指定した綴りを覚える課題です。システム全体の変換やIMEの候補変換は行いません。「日本語入力」では利用者が選んだIMEの確定済みひらがなを比較し、入力途中は採点しません。別解の綴りは日本語入力モードで練習できます。
 
-Releaseタグ `v0.8.0-beta.5` は旧 `v0.8.0-public.beta.5` と同じ公開コミットの別名です。配布済みアプリ内の版表示は `0.8.0-public.beta.5` のままで、対応配列・変換処理・同梱教材は同一です。
+対応アプリの `public.beta` は一般公開の試験版を表します。正規のReleaseタグと配布物は従来どおり `v0.8.0-public.beta.5` です。別名タグ `v0.8.0-beta.5` も同じ公開コミットを指します。
