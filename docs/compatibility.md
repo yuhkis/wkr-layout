@@ -2,19 +2,28 @@
 
 | 対象 | 配列版 | 状態 |
 | --- | --- | --- |
-| このリポジトリのJSON・配列表 | 2.0.0-beta.1 | 正本、233規則 |
-| [WKR macOS v2 Public Beta 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) | アプリ0.8.0-public.beta.5 / 配列2.0.0-beta.1 | 固定commitから生成。Apple日本語入力の前段 |
-| 練習アプリ | アプリ0.1.0 / 配列2.0.0-beta.1 | ブラウザと同梱版で同一教材 |
-| v2/ のGoogle日本語入力・azooKey | 2.0.0-beta.1 | 生成・構造検査済み、実IME未確認 |
+| このリポジトリのJSON・配列表（main） | 2.0.0-beta.2 | 正本、233規則。Releaseは未作成 |
+| [配列2.0.0-beta.1のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.1) | 2.0.0-beta.1 | 公開済みの仕様zip。ん＝M、っ＝N |
+| [WKR macOS v2 Public Beta 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) | アプリ0.8.0-public.beta.5 / 配列2.0.0-beta.1 | 固定commitから生成。Apple日本語入力の前段。2.0.0-beta.2への同期は未実施 |
+| 練習帳（main） | 練習0.2.1 / 配列2.0.0-beta.2 | 教材ソース。Web公開は未実施 |
+| [ブラウザデモ](https://yuhkis.github.io/wkr-layout/) | 練習0.2.0 / 配列2.0.0-beta.1 | 公開中。ん＝M、っ＝N |
+| macOS同梱の練習帳 | 練習0.1.0 / 配列2.0.0-beta.1 | 0.8.0-public.beta.5に同梱 |
+| v2/ のGoogle日本語入力・azooKey | 2.0.0-beta.2 | 生成・構造検査済み、実IME未確認 |
 | [WKR macOS 0.7.0 保存ソース](https://github.com/yuhkis/wkr-macos/releases/tag/v0.7.0-archive.1) | 保存版0.7.0-archive.1 / 配列1.1.0 | v1用。現行Public v2とは別 |
 | ルート直下の旧IMEテーブル | 1.1.0 | 旧版の保全。v2導入には使わない |
 
-v1から、が行はA、ぱ行はT、小書きはQ、よ列はI、ゆ列はO、長音はY、んはM、っはN、記号前置はPへ変わりました。`/` は疑問符、Shift+/ は中点です。Q単打はぁ、QPはゎです。WJに母音・拗音列を続けるとゔ行になります。
+v1から、が行はA、ぱ行はT、小書きはQ、よ列はI、ゆ列はO、長音はY、記号前置はPへ変わりました。ん（N）・っ（M）はv1と同じです。`/` は疑問符、Shift+/ は中点です。Q単打はぁ、QPはゎです。WJに母音・拗音列を続けるとゔ行になります。
 
 Pを2打鍵目に置く短縮形はベータで評価中です。ヵ・ヶは直接規則を設けず、かな漢字変換で入力します。かなの網羅性についてv1の検証結果をv2の結果として扱いません。
 
 WKR macOSはJISの物理キーコードを基準にし、通常かなはローマ字をApple日本語入力へ送ります。Unicode記号は確定文字になり、未確定文字列がある間は抑止します。Google日本語入力とazooKeyはテーブル内で出力するため、記号の確定・変換の扱いが異なります。JIS外の記号位置、Googleの保留文字、azooKeyのcomposition-separator / any characterの扱いは実IMEで要確認です。
 
 練習の「キー位置」は指定した綴りを覚える課題です。システム全体の変換やIMEの候補変換は行いません。「日本語入力」では利用者が選んだIMEの確定済みひらがなを比較し、入力途中は採点しません。別解の綴りは日本語入力モードで練習できます。
+
+## 2.0.0-beta.2 での変更
+
+2.0.0-beta.1で入れ替えていた ん・っ を、v1と同じ ん＝N、っ＝M に戻しました。規則IDもv1と同じ `n-n`・`m-small-tsu` です。ほかの規則は変えていません（Pの後の `N`＝′・`M`＝″ などの記号選択、`Y`・`/`・Shift+/、I/O、特殊列、3打鍵の規則はそのまま）。
+入れ替えは頻度の高い ん を打ちやすい位置へ移す試みでしたが、評価の結果、v1の位置へ戻すことにしました。列ずれの分割キーボードなどで特定の物理位置が打ちにくい場合は、配列表ではなく各自のキーボード設定で物理キーを割り当ててください。
+練習帳は、教材の打鍵がこの変更で変わるため0.2.1にしました。「v1 からの移行」の課題から ん・っ を外しています。成績の保存先は配列版ごとに分かれるため、2.0.0-beta.1で保存した成績は引き継がれません。
 
 対応アプリの `public.beta` は一般公開の試験版を表します。正規のReleaseタグと配布物は従来どおり `v0.8.0-public.beta.5` です。
