@@ -11,8 +11,13 @@ class LayoutTests(unittest.TestCase):
         for rule in g.RULES:
             with self.subTest(rule=rule['id']): self.assertEqual(g.decode(rule['keys']),rule['output'])
     def test_prefix_boundaries(self):
-        for keys,text in [('wer','わから'),('ehk','かい'),('qwe','ぁわか'),('qm','ぁん'),('qp','ゎ'),('wjh','ゔぁ'),('wjj','ゔ'),('em','かん'),('en','かっ'),('ey','かー'),('ci','どぅ'),('xo','てゅ')]:
+        for keys,text in [('wer','わから'),('ehk','かい'),('qwe','ぁわか'),('qn','ぁん'),('qp','ゎ'),('wjh','ゔぁ'),('wjj','ゔ'),('en','かん'),('em','かっ'),('ey','かー'),('ci','どぅ'),('xo','てゅ')]:
             self.assertEqual(g.decode(list(keys)),text)
+    def test_nasal_and_geminate_keep_the_v1_keys(self):
+        # 2.0.0-beta.2 put ん back on N and っ on M under the v1 rule IDs.
+        self.assertEqual(g.BY_KEYS[('n',)]['id'],'n-n');self.assertEqual(g.BY_KEYS[('n',)]['output'],'ん')
+        self.assertEqual(g.BY_KEYS[('m',)]['id'],'m-small-tsu');self.assertEqual(g.BY_KEYS[('m',)]['output'],'っ')
+        self.assertEqual(g.BY_KEYS[('p','n')]['output'],'′');self.assertEqual(g.BY_KEYS[('p','m')]['output'],'″')
     def test_all_lessons_use_current_rules(self):
         data=g.practice_data()
         self.assertEqual(len(data['lessons']),12)
