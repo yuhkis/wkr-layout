@@ -4,9 +4,9 @@
 
 規則のキー列・ID重複を拒否し、教材の綴りは最長一致モデルで再変換して対象かなと照合します。規則の出力と綴りに私的な実測値やログを混ぜないでください。
 
-練習帳の公開配布は `python3 scripts/package.py`。練習帳だけをzipにし、`build/distribution/<commit>/`へSHA256とともに出力します。既存候補は別のcommitの出力先に保持します。Gitの履歴をzipへ含めず、含めるパスを固定します。公開前に `docs/verification.md` の未確認事項を見直します。
+公開配布は `python3 scripts/package.py`。練習帳のzipと、まだReleaseしていない配列版の仕様zip（配列JSON・配列表・IMEテーブル・文書・その版の `docs/release-<配列版>.md`）を、`build/distribution/<commit>/`へ `manifest.json`・`SHA256SUMS` とともに出力します。既存候補は別のcommitの出力先に保持します。Gitの履歴をzipへ含めず、含めるパスを固定します。公開前に `docs/verification.md` の未確認事項を見直します。
 
-配列2.0.0-beta.1の公開済み仕様ZIPは再生成しません。v1.1の保全テーブルは専用の保存資料ZIPで配布します。
+Release済みの配列版（`package.py` の `RELEASED_LAYOUTS`。現在は2.0.0-beta.1）の仕様ZIPは再生成しません。配列版をReleaseしたら、次の変更でその版を `RELEASED_LAYOUTS` に加えます。v1.1の保全テーブルは専用の保存資料ZIPで配布します。
 
 ## v1.1の保存資料を作る
 
@@ -36,7 +36,7 @@
 
 ## 練習帳0.2.0とWebデモの配布
 
-QWERTY体験とWKR・IME入力を選べる練習帳を用意します。教材はv2対象です。`python3 scripts/package.py` は練習帳ZIPだけを生成し、公開済み配列2.0.0-beta.1のZIPを作り直しません。`python3 scripts/package-site.py` はcleanなcommitを監査し、固定の9ファイルだけをbuild/site/<commit>/publicとsite.zipに出力します。`--expect-sha256 HASH` は事前に確認したサイトZIPとの一致を必須にします。
+QWERTY体験とWKR・IME入力を選べる練習帳を用意します。教材はv2対象です。`python3 scripts/package.py` はRelease済みの配列版の仕様ZIPを作り直しません。`python3 scripts/package-site.py` はcleanなcommitを監査し、固定の9ファイルだけをbuild/site/<commit>/publicとsite.zipに出力します。`--expect-sha256 HASH` は事前に確認したサイトZIPとの一致を必須にします。
 
 Pagesのworkflowはmainからの手動実行だけです。公開承認後にGitHub PagesをGitHub Actions方式に設定し、正確なrefと監査済みsite.zipのSHA256を指定します。pushやPRだけでサイトを公開しません。公開先は https://yuhkis.github.io/wkr-layout/ です。公開対象に作業場や私的記録を含めません。導入方法と保存の詳細はpractice/README.mdを参照してください。
 
