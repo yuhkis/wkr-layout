@@ -74,3 +74,12 @@ Google日本語入力とazooKeyのテーブルは別の入力経路です。Appl
 - ローカルに配信したページをChromium系のブラウザで開き、版表示「練習 0.2.1 / 配列 2.0.0-beta.2」、キーボード図の N＝ん・M＝っ、QWERTY体験の体験欄で `E` `K` `N` が「きん」、`E` `K` `M` が「きっ」になることを確認しました。
 
 未確認: 実機WKR・Apple日本語入力との組み合わせ、Google日本語入力・azooKeyでの実入力、Safari / Firefox。WKR macOS側の同期（別リポジトリ）は未実施です。
+
+
+## 2026-09-26 — 配列2.0.0-beta.2・練習帳0.2.1のRelease・デモ公開候補
+
+配列2.0.0-beta.2と練習帳0.2.1を、Release（仕様ZIP・練習帳ZIP・`manifest.json`・`SHA256SUMS`）とブラウザデモで公開する準備です。配列・教材の内容は前項から変えていません。
+
+- `scripts/package.py` は、Release済みの配列版（2.0.0-beta.1）の仕様ZIPを作らず、まだReleaseしていない配列版だけ仕様ZIPを作ります。収録パスは2.0.0-beta.1の仕様ZIPと同じ固定リストで、その版の `docs/release-<配列版>.md` を加えます。ZIP内のREADMEは配布用の短い説明です。
+- 文書は公開後の状態に合わせました（README、対応表、練習帳の説明、Release文案）。公開済みのmacOSアプリは2.0.0-beta.1のままであることを明記しています。
+- 配布物とサイトは統合後のmainのcommitから作り、公開ガードの監査と、公開物のSHA256の照合を行います。

@@ -1,18 +1,18 @@
 # わから配列 v2 — 公開ベータ
 
 左手で行を、右手で段を選ぶ日本語入力配列です。`W E R` + Enter で「わから」、`E K` で「き」になります。
-このリポジトリが配列仕様と練習教材の正本です。main は **配列 2.0.0-beta.2 / 練習帳 0.2.1** です（Releaseとブラウザデモへの反映は未実施）。
-2.0.0-beta.2 では、2.0.0-beta.1 で入れ替えていた ん・っ を v1 と同じ **ん＝N、っ＝M** に戻しました（[変更点](docs/compatibility.md#200-beta2-での変更)）。公開中のブラウザデモ（練習帳0.2.0）と配列2.0.0-beta.1のReleaseは、ん＝M、っ＝N のままです。
+このリポジトリが配列仕様と練習教材の正本です。**配列 2.0.0-beta.2 / 練習帳 0.2.1** を提供します。
+2.0.0-beta.2 では、2.0.0-beta.1 で入れ替えていた ん・っ を v1 と同じ **ん＝N、っ＝M** に戻しました（[変更点](docs/compatibility.md#200-beta2-での変更)）。
 
 **[ブラウザでわから配列を体験する](https://yuhkis.github.io/wkr-layout/)** — アプリのインストール不要。ABC・英数で、いつものQWERTYキーボードから試せます。
 
-[配列2.0.0-beta.1の配布zipとSHA256SUMS](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.1)は公式Releaseにあります。この既存Releaseと公開済みmacOSアプリには練習帳0.1.0を同梱しています。Web練習帳0.2.0ではQWERTY体験を追加しました。
+[配列2.0.0-beta.2の配布zipとSHA256SUMS](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.2)は公式Releaseにあります。以前の[2.0.0-beta.1のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.1)（ん＝M、っ＝N、練習帳0.1.0）も残しています。練習帳は0.2.0でQWERTY体験を追加しました。
 
 ## 初めて使う方へ
 
 1. [ブラウザデモ](https://yuhkis.github.io/wkr-layout/)を開き、ABC・英数に切り替えて「QWERTYで体験」を選びます。Hで「あ」、E→Kで「き」を入力できます。WKR導入済みの方は「WKR・IMEで練習」を選び、普段のひらがな入力でも練習できます。
 2. [配列表](docs/layout-v2.md)で基本キーを確認します。練習は母音・行キーから短文へ進みます。
-3. 実際の文章入力には [WKR macOS v2 Public Beta 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) とApple日本語入力を使います。[実装の違い](docs/compatibility.md)も確認してください。
+3. 実際の文章入力には [WKR macOS v2 Public Beta 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) とApple日本語入力を使います。このアプリは配列2.0.0-beta.1（ん＝M、っ＝N）のままで、2.0.0-beta.2に対応した版は未公開です。[実装の違い](docs/compatibility.md)も確認してください。
 
 練習アプリは既定では成績を保存しません。「成績をこの端末に保存」を有効にした場合だけ課題別の完了回数・最高正答率を保存します。入力本文・誤入力・キー列・時刻は保存しません。[保存と削除](practice/README.md)を参照してください。
 
@@ -44,7 +44,7 @@ node --test practice/*.test.cjs
 
 使い方と構成は [scripts/README.md](scripts/README.md)、教材とブラウザ版は [practice/README.md](practice/README.md)へ。
 教材を変えたら練習版、規則を変えたら配列版を更新し、WKR macOS側の同期スクリプトで固定commitから取り込みます。
-[公開ベータの検証記録](docs/verification.md)と[Release文案](docs/release-2.0.0-beta.1.md)に確認範囲を残します。
+[公開ベータの検証記録](docs/verification.md)と[Release文案](docs/release-2.0.0-beta.2.md)に確認範囲を残します。
 
 MIT License — [LICENSE](LICENSE)。背景と従来版の説明は[v1資料](docs/v1.md)に残しています。
 
