@@ -15,12 +15,12 @@ if subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True).st
 revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
 out=root/'build/distribution'/revision;out.mkdir(parents=True,exist_ok=True)
 groups={f'wakara-practice-{practice}.zip':['LICENSE']+['practice/'+n for n in ['index.html','style.css','data.js','core.js','engine.js','app.js','README.md','VERSION']]}
-RELEASED_LAYOUTS={'2.0.0-beta.1'}
+RELEASED_LAYOUTS={'2.0.0-beta.1','2.0.0-beta.2'}
 if layout not in RELEASED_LAYOUTS:
-    groups={f'wakara-layout-{layout}.zip':['LICENSE','README.md','docs/layout-v2.md','docs/compatibility.md','docs/verification.md','docs/publication-audit.md','docs/v1.md',f'docs/release-{layout}.md','practice/README.md','scripts/README.md','data/layout-v2.json','google-japanese-input/romantable.txt','azookey/custom_input_table.tsv','v2/google-japanese-input/romantable.txt','v2/azookey/custom_input_table.tsv'],**groups}
+    groups={f'wakara-layout-{layout}.zip':['LICENSE','README.md','docs/layout-v2.md','docs/images/keymap-v2.svg','docs/compatibility.md','docs/verification.md','docs/publication-audit.md','docs/v1.md',f'docs/release-{layout}.md','practice/README.md','scripts/README.md','data/layout-v2.json','google-japanese-input/romantable.txt','azookey/custom_input_table.tsv','v2/google-japanese-input/romantable.txt','v2/azookey/custom_input_table.tsv'],**groups}
 distribution_readme=f'''# わから配列 {layout}
 
-正本は data/layout-v2.json、配列表は docs/layout-v2.md です。変更点は docs/release-{layout}.md と docs/compatibility.md にあります。
+正本は data/layout-v2.json、配列表は docs/layout-v2.md です（キー配置の図は docs/images/keymap-v2.svg）。変更点は docs/release-{layout}.md と docs/compatibility.md にあります。
 v2/google-japanese-input と v2/azookey は実IME未確認の生成テーブルです。
 導入時の差異と検証状況は docs/compatibility.md と docs/verification.md を参照してください。
 docs/v1.md は旧版の保全です。google-japanese-input/ と azookey/ の直下にはv1.1テーブルを同梱しています。v2/ 内のテーブルと混在させないでください。

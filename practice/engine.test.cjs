@@ -19,7 +19,7 @@ test('prefix replacement, fallback, explicit vowel and triple sequence',()=>{
 test('backspace discards a provisional group or deletes a completed character',()=>{
  const e=create(data.rules);e.feed('w');e.feed('j');assert.equal(e.backspace(),'');
  e.feed('e');e.feed('k');assert.equal(e.backspace(),'');
- e.feed('p');assert.equal(e.backspace(),'');e.feed('h');assert.equal(e.flush(),'あ');
+ e.feed('q');e.feed('q');assert.equal(e.backspace(),'');e.feed('h');assert.equal(e.flush(),'あ');
 });
 test('current text is bounded and reset forgets pending state',()=>{
  const e=create(data.rules,4);for(let i=0;i<20;i++)e.feed('h');assert.equal(e.text(),'ああああ');
