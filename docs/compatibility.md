@@ -2,23 +2,46 @@
 
 | 対象 | 配列版 | 状態 |
 | --- | --- | --- |
-| このリポジトリのJSON・配列表、[配列2.0.0-beta.3のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.3) | 2.0.0-beta.3 | 正本、220規則。ん＝N・U、っ＝M、や＝P、記号・矢印＝Q Q の後、特殊列なし |
+| このリポジトリのJSON・配列表、[配列2.0.0-beta.4のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.4) | 2.0.0-beta.4 | 正本、171規則。ん＝M、っ＝U、N＝いぇ（行キーの後は ぇ の段）、や＝P、記号・矢印の規則なし、特殊列なし |
+| [配列2.0.0-beta.3のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.3) | 2.0.0-beta.3 | 以前の仕様zip、220規則。ん＝N・U、っ＝M、や＝P、記号・矢印＝Q Q の後 |
 | [配列2.0.0-beta.2のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.2) | 2.0.0-beta.2 | 以前の仕様zip、233規則。ん＝N、っ＝M、や＝U、記号前置と特殊列＝P |
 | [配列2.0.0-beta.1のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.1) | 2.0.0-beta.1 | 以前の仕様zip。ん＝M、っ＝N |
-| [WKR macOS v2 Public Beta 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) | アプリ0.8.0-public.beta.5 / 配列2.0.0-beta.1 | 固定commitから生成。Apple日本語入力の前段。2.0.0-beta.2・2.0.0-beta.3への同期は未公開 |
-| 練習帳、[ブラウザデモ](https://yuhkis.github.io/wkr-layout/) | 練習0.3.0 / 配列2.0.0-beta.3 | ブラウザとZIPで同一教材 |
+| [WKR macOS v2 Public Beta 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) | アプリ0.8.0-public.beta.5 / 配列2.0.0-beta.1 | 固定commitから生成。Apple日本語入力の前段。2.0.0-beta.2〜2.0.0-beta.4への同期は未公開 |
+| 練習帳、[ブラウザデモ](https://yuhkis.github.io/wkr-layout/) | 練習0.4.0 / 配列2.0.0-beta.4 | ブラウザとZIPで同一教材 |
 | macOS同梱の練習帳 | 練習0.1.0 / 配列2.0.0-beta.1 | 0.8.0-public.beta.5に同梱 |
-| v2/ のGoogle日本語入力・azooKey | 2.0.0-beta.3 | 生成・構造検査済み、実IME未確認 |
+| v2/ のGoogle日本語入力・azooKey | 2.0.0-beta.4 | 生成・構造検査済み、実IME未確認 |
 | [WKR macOS 0.7.0 保存ソース](https://github.com/yuhkis/wkr-macos/releases/tag/v0.7.0-archive.1) | 保存版0.7.0-archive.1 / 配列1.1.0 | v1用。現行Public v2とは別 |
 | ルート直下の旧IMEテーブル | 1.1.0 | 旧版の保全。v2導入には使わない |
 
-v1から、が行はA、ぱ行はT、小書きはQ、よ列はI、ゆ列はO、や列はP、長音はYへ変わり、記号・矢印はQ Qの後になりました。ん（N）・っ（M）はv1と同じで、ん はUでも打てます。`/` は疑問符、Shift+/ は中点です。Q単打はぁ、QPはゃ、QWはゎです。WJに母音・拗音列を続けるとゔ行になります。
+v1から、が行はA、ぱ行はT、小書きはQ、よ列はI、ゆ列はO、や列はP、長音はYへ変わりました。ん はM、っ はU（v1は ん＝N、っ＝M）で、N は いぇ（行キーの後は ぇ の段）です。記号・矢印の規則はなく、かな漢字変換で入力します。`/` は疑問符、Shift+/ は中点です。Q単打はぁ、QPはゃ、QWはゎです。WJに母音・拗音列を続けるとゔ行になります。
 
 2打鍵で2かなを出す短縮形（特殊列）は2.0.0-beta.3で廃止しました。ヵ・ヶは直接規則を設けず、かな漢字変換で入力します。かなの網羅性についてv1の検証結果をv2の結果として扱いません。
 
-WKR macOSはJISの物理キーコードを基準にし、通常かなはローマ字をApple日本語入力へ送ります。Unicode記号は確定文字になり、未確定文字列がある間は抑止します。Google日本語入力とazooKeyはテーブル内で出力するため、記号の確定・変換の扱いが異なります。JIS外の記号位置、Googleの保留文字、azooKeyのcomposition-separator / any characterの扱いは実IMEで要確認です。
+WKR macOSはJISの物理キーコードを基準にし、かなはローマ字をApple日本語入力へ送ります。2.0.0-beta.3までの記号・矢印の規則は確定文字（Unicode）で送り、未確定文字列がある間は抑止していました。2.0.0-beta.4には確定文字で送る規則はありません。Google日本語入力とazooKeyはテーブル内で出力します。JIS外の記号位置、Googleの保留文字、azooKeyのcomposition-separator / any characterの扱いは実IMEで要確認です。
 
 練習の「キー位置」は指定した綴りを覚える課題です。システム全体の変換やIMEの候補変換は行いません。「日本語入力」では利用者が選んだIMEの確定済みひらがなを比較し、入力途中は採点しません。別解の綴りは日本語入力モードで練習できます。
+
+## 2.0.0-beta.4 での変更
+
+| キー | 2.0.0-beta.3 | 2.0.0-beta.4 | 規則ID（2.0.0-beta.3 → 2.0.0-beta.4） |
+| --- | --- | --- | --- |
+| `M` 単打 | っ | ん | `m-small-tsu` → `m-n`（2.0.0-beta.1 と同じID） |
+| `U` 単打 | ん | っ | `u-n` → `u-small-tsu` |
+| `N` 単打 | ん | いぇ | `n-n` → `n-ye` |
+| 行キー＋`N` | 規則なし（行のあ段＋ん。`E N` かん） | ぇの段（きぇ しぇ ちぇ にぇ ひぇ みぇ りぇ ぎぇ じぇ ぢぇ びぇ ぴぇ ふぇ） | 新規13件（`en-kye` `sn-she` `fn-che` `dn-nye` `gn-hye` `vn-mye` `rn-rye` `an-gye` `zn-je` `cn-dye` `bn-bye` `tn-pye` `xn-fe`） |
+| 記号55件・矢印4件 | `Q Q` の後に1打 | 廃止（`Q Q` は ぁぁ） | `qql-right` `qqa-reference-mark` など59件を削除 |
+| `Q ,` `Q .` `Q /` | ， ． ／ | 廃止（ぁ の後に 、 。 ？） | `qcomma-fullwidth-comma` `qperiod-fullwidth-period` `qslash-fullwidth-slash` を削除 |
+
+ほかの規則（`P` や、`I` よ、`O` ゆ、行キーの後の `P` `O` `I`、`Y` ー、`/` ？、Shift+/ ・、が行・ぱ行、だ行・`X` 行の外来音、小書きの行、ゔ行の3打鍵）は変えていません。規則は220件から171件です（削除65件、追加16件）。
+
+- ん は `M` の1キーに戻しました（2.0.0-beta.1 と同じ位置・規則ID）。試用で最も長く使った位置で、指を曲げるだけで届きます。
+- っ は `U` に置きました。人差し指を真上へ動かすだけで届きます。
+- `N` は単打で いぇ、行キーの後で ぇ の段です。拗音の段キーは `P`＝や・`O`＝ゆ・`I`＝よ・`N`＝いぇ の4つになり、しぇ・ちぇ・じぇ は2打鍵（`S N` `F N` `Z N`）で打てます。ローマ字入力の習慣で `N` を打っても ん・っ にはならないので、打ち間違いに気づけます。
+- だ行・`X` 行の `P` `O` `I` は外来音（でぃ・でゅ・どぅ、てぃ・てゅ・とぅ）のままで、`N` はほかの行と同じ ぇ の段です（`C N` ぢぇ、`X N` ふぇ。ふぇ は `X ;` でも打てます）。わ行（`W`）・小書きの行（`Q`）・ゔ の行（`W J`）には ぇ の段を置いていません。
+- 記号・矢印の規則は、試用で使う機会が少なく、かな漢字変換でも出せるため廃止しました。`Q Q` は ぁぁ です。
+
+練習帳は、教材の打鍵と課題が変わるため0.4.0にしました（ん の打鍵は `M`、っ は `U`。しぇ・ちぇ・じぇ・いぇ を「や・よ・ゆ・いぇの列」の課題へ移し、「v1 からの移行」に ん・っ を加えました）。成績の保存先は配列版ごとに分かれるため、2.0.0-beta.3で保存した成績は引き継がれません。
+Google日本語入力のv2テーブルから、`Q Q` の保留（■）の行はなくなりました。各IMEでの実入力は未確認です。
 
 ## 2.0.0-beta.3 での変更
 

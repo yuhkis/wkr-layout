@@ -8,6 +8,7 @@ el	こ
 ep	きゃ
 eo	きゅ
 ei	きょ
+en	きぇ
 s{composition-separator}	さ
 s{any character}	さ{any character}
 sh	さ
@@ -18,6 +19,7 @@ sl	そ
 sp	しゃ
 so	しゅ
 si	しょ
+sn	しぇ
 f{composition-separator}	た
 f{any character}	た{any character}
 fh	た
@@ -28,6 +30,7 @@ fl	と
 fp	ちゃ
 fo	ちゅ
 fi	ちょ
+fn	ちぇ
 d{composition-separator}	な
 d{any character}	な{any character}
 dh	な
@@ -38,6 +41,7 @@ dl	の
 dp	にゃ
 do	にゅ
 di	にょ
+dn	にぇ
 g{composition-separator}	は
 g{any character}	は{any character}
 gh	は
@@ -48,6 +52,7 @@ gl	ほ
 gp	ひゃ
 go	ひゅ
 gi	ひょ
+gn	ひぇ
 v{composition-separator}	ま
 v{any character}	ま{any character}
 vh	ま
@@ -58,6 +63,7 @@ vl	も
 vp	みゃ
 vo	みゅ
 vi	みょ
+vn	みぇ
 r{composition-separator}	ら
 r{any character}	ら{any character}
 rh	ら
@@ -68,6 +74,7 @@ rl	ろ
 rp	りゃ
 ro	りゅ
 ri	りょ
+rn	りぇ
 w{composition-separator}	わ
 w{any character}	わ{any character}
 wh	わ
@@ -89,6 +96,7 @@ al	ご
 ap	ぎゃ
 ao	ぎゅ
 ai	ぎょ
+an	ぎぇ
 z{composition-separator}	ざ
 z{any character}	ざ{any character}
 zh	ざ
@@ -99,6 +107,7 @@ zl	ぞ
 zp	じゃ
 zo	じゅ
 zi	じょ
+zn	じぇ
 c{composition-separator}	だ
 c{any character}	だ{any character}
 ch	だ
@@ -109,6 +118,7 @@ cl	ど
 cp	でぃ
 co	でゅ
 ci	どぅ
+cn	ぢぇ
 b{composition-separator}	ば
 b{any character}	ば{any character}
 bh	ば
@@ -119,6 +129,7 @@ bl	ぼ
 bp	びゃ
 bo	びゅ
 bi	びょ
+bn	びぇ
 t{composition-separator}	ぱ
 t{any character}	ぱ{any character}
 th	ぱ
@@ -129,6 +140,7 @@ tl	ぽ
 tp	ぴゃ
 to	ぴゅ
 ti	ぴょ
+tn	ぴぇ
 x{composition-separator}	ふぁ
 x{any character}	ふぁ{any character}
 xh	ふぁ
@@ -139,6 +151,7 @@ xl	ふぉ
 xp	てぃ
 xo	てゅ
 xi	とぅ
+xn	ふぇ
 h	あ
 k	い
 j	う
@@ -147,9 +160,9 @@ l	お
 p	や
 o	ゆ
 i	よ
-n	ん
-u	ん
-m	っ
+n	いぇ
+u	っ
+m	ん
 y	ー
 ・	？
 ?	・
@@ -164,9 +177,6 @@ qi	ょ
 q{composition-separator}	ぁ
 q{any character}	ぁ{any character}
 qw	ゎ
-q、	，
-q。	．
-q・	／
 wjh	ゔぁ
 wjk	ゔぃ
 wjj	ゔ
@@ -175,62 +185,3 @@ wjl	ゔぉ
 wjp	ゔゃ
 wjo	ゔゅ
 wji	ゔょ
-qqh	←
-qqj	↓
-qqk	↑
-qql	→
-qq1	○
-qq!	●
-qq2	▽
-qq"	▼
-qq3	△
-qq#	▲
-qq4	□
-qq$	■
-qq5	◇
-qq%	◆
-qq6	☆
-qq&	★
-qq7	◎
-qq'	￡
-qq8	￠
-qq(	【
-qq9	♂
-qq)	】
-qq0	♀
-qq_	∴
-qq=	≒
-qq+	±
-qq\	＼
-qq|	∥
-qq`	´
-qq~	¨
-qqq	゛
-qqp	～
-qq:	゜
-qqn	′
-qqm	″
-qq；	；
-qq、	，
-qq<	≦
-qq。	．
-qq>	≧
-qq・	／
-qqe	々
-qqt	〆
-qqs	ヽ
-qqd	ゝ
-qqf	〃
-qqg	‐
-qqc	〇
-qqx	×
-qqa	※
-qqb	°
-qqw	w
-qqy	〒
-qq[	［
-qq]	］
-qq{	《
-qq}	》
-qqi	【
-qqo	】

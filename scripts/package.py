@@ -15,7 +15,7 @@ if subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True).st
 revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
 out=root/'build/distribution'/revision;out.mkdir(parents=True,exist_ok=True)
 groups={f'wakara-practice-{practice}.zip':['LICENSE']+['practice/'+n for n in ['index.html','style.css','data.js','core.js','engine.js','app.js','README.md','VERSION']]}
-RELEASED_LAYOUTS={'2.0.0-beta.1','2.0.0-beta.2'}
+RELEASED_LAYOUTS={'2.0.0-beta.1','2.0.0-beta.2','2.0.0-beta.3'}
 if layout not in RELEASED_LAYOUTS:
     groups={f'wakara-layout-{layout}.zip':['LICENSE','README.md','docs/layout-v2.md','docs/images/keymap-v2.svg','docs/compatibility.md','docs/verification.md','docs/publication-audit.md','docs/v1.md',f'docs/release-{layout}.md','practice/README.md','scripts/README.md','data/layout-v2.json','google-japanese-input/romantable.txt','azookey/custom_input_table.tsv','v2/google-japanese-input/romantable.txt','v2/azookey/custom_input_table.tsv'],**groups}
 distribution_readme=f'''# わから配列 {layout}

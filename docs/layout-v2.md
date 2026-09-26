@@ -1,8 +1,8 @@
 # わから配列 v2 配列表
 
-配列版 **2.0.0-beta.3**。`data/layout-v2.json` から生成。
+配列版 **2.0.0-beta.4**。`data/layout-v2.json` から生成。
 
-![わから配列 2.0.0-beta.3 のキー配置](images/keymap-v2.svg)
+![わから配列 2.0.0-beta.4 のキー配置](images/keymap-v2.svg)
 
 ## ひと目で
 
@@ -11,37 +11,38 @@
 
 | | 小指 | 薬指 | 中指 | 人差し指 | 人差し指 | 人差し指 | 人差し指 | 中指 | 薬指 | 小指 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 上段 | `Q` ぁ行 | `W` わ行 | `E` か行 | `R` ら行 | `T` ぱ行 | `Y` ー | `U` ん | `I` よ | `O` ゆ | `P` や |
+| 上段 | `Q` ぁ行 | `W` わ行 | `E` か行 | `R` ら行 | `T` ぱ行 | `Y` ー | `U` っ | `I` よ | `O` ゆ | `P` や |
 | 中段 | `A` が行 | `S` さ行 | `D` な行 | `F` た行 | `G` は行 | `H` あ | `J` う | `K` い | `L` お | `;` え |
-| 下段 | `Z` ざ行 | `X` ふぁ行 | `C` だ行 | `V` ま行 | `B` ば行 | `N` ん | `M` っ | `,` 、 | `.` 。 | `/` ？ |
+| 下段 | `Z` ざ行 | `X` ふぁ行 | `C` だ行 | `V` ま行 | `B` ば行 | `N` いぇ | `M` ん | `,` 、 | `.` 。 | `/` ？ |
 
-- `U` と `N` はどちらも ん、`M` は っ、`Y` は ー、`/` は ？、Shift+`/` は ・ です。`,` `.` は入力方式の句読点設定のまま通します。
-- 行キーの後に段キー（`H` `K` `J` `;` `L` `P` `O` `I`）以外を打つと、行のあ段を確定してからそのキーの文字になります（`E U` かん、`E Y` かー）。
+- `M` は ん、`U` は っ、`Y` は ー、`/` は ？、Shift+`/` は ・ です。`,` `.` は入力方式の句読点設定のまま通します。
+- `N` は単打で いぇ、行キーの後で ぇ の段です（`E N` きぇ、`S N` しぇ、`F N` ちぇ）。
+- 行キーの後に段キー（`H` `K` `J` `;` `L` `P` `O` `I` `N`）以外を打つと、行のあ段を確定してからそのキーの文字になります（`E M` かん、`E U` かっ、`E Y` かー）。
   あ段のかなの直後に段キーのかなを続けるときは `H` を明示します（かい＝`E H K`、かや＝`E H P`）。
-- 記号・矢印は `Q` `Q` の後に1打です（`Q Q L` →、`Q Q H` ←、`Q Q A` ※）。全件は下の一覧にあります。
+- 記号・矢印を出す規則はありません。IMEのかな漢字変換で入力します。
 
 ## 行と段の組み合わせ
 
 行キー（`W J` は ゔ の行で、3打鍵目で段を選ぶ）の後に段キーを打ちます。表は五十音の順です。
 
-| 行キー | 単打 | `H` あ段 | `K` い段 | `J` う段 | `;` え段 | `L` お段 | `P` ゃ | `O` ゅ | `I` ょ |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `E` | か | か | き | く | け | こ | きゃ | きゅ | きょ |
-| `S` | さ | さ | し | す | せ | そ | しゃ | しゅ | しょ |
-| `F` | た | た | ち | つ | て | と | ちゃ | ちゅ | ちょ |
-| `D` | な | な | に | ぬ | ね | の | にゃ | にゅ | にょ |
-| `G` | は | は | ひ | ふ | へ | ほ | ひゃ | ひゅ | ひょ |
-| `V` | ま | ま | み | む | め | も | みゃ | みゅ | みょ |
-| `R` | ら | ら | り | る | れ | ろ | りゃ | りゅ | りょ |
-| `W` | わ | わ | うぃ | ゔ | うぇ | を | ゐ | ゑ | うぉ |
-| `A` | が | が | ぎ | ぐ | げ | ご | ぎゃ | ぎゅ | ぎょ |
-| `Z` | ざ | ざ | じ | ず | ぜ | ぞ | じゃ | じゅ | じょ |
-| `C` | だ | だ | ぢ | づ | で | ど | でぃ | でゅ | どぅ |
-| `B` | ば | ば | び | ぶ | べ | ぼ | びゃ | びゅ | びょ |
-| `T` | ぱ | ぱ | ぴ | ぷ | ぺ | ぽ | ぴゃ | ぴゅ | ぴょ |
-| `X` | ふぁ | ふぁ | ふぃ | ふゅ | ふぇ | ふぉ | てぃ | てゅ | とぅ |
-| `W J` | ゔ | ゔぁ | ゔぃ | ゔ | ゔぇ | ゔぉ | ゔゃ | ゔゅ | ゔょ |
-| `Q` | ぁ | ぁ | ぃ | ぅ | ぇ | ぉ | ゃ | ゅ | ょ |
+| 行キー | 単打 | `H` あ段 | `K` い段 | `J` う段 | `;` え段 | `L` お段 | `P` ゃ | `O` ゅ | `I` ょ | `N` ぇ |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `E` | か | か | き | く | け | こ | きゃ | きゅ | きょ | きぇ |
+| `S` | さ | さ | し | す | せ | そ | しゃ | しゅ | しょ | しぇ |
+| `F` | た | た | ち | つ | て | と | ちゃ | ちゅ | ちょ | ちぇ |
+| `D` | な | な | に | ぬ | ね | の | にゃ | にゅ | にょ | にぇ |
+| `G` | は | は | ひ | ふ | へ | ほ | ひゃ | ひゅ | ひょ | ひぇ |
+| `V` | ま | ま | み | む | め | も | みゃ | みゅ | みょ | みぇ |
+| `R` | ら | ら | り | る | れ | ろ | りゃ | りゅ | りょ | りぇ |
+| `W` | わ | わ | うぃ | ゔ | うぇ | を | ゐ | ゑ | うぉ |  |
+| `A` | が | が | ぎ | ぐ | げ | ご | ぎゃ | ぎゅ | ぎょ | ぎぇ |
+| `Z` | ざ | ざ | じ | ず | ぜ | ぞ | じゃ | じゅ | じょ | じぇ |
+| `C` | だ | だ | ぢ | づ | で | ど | でぃ | でゅ | どぅ | ぢぇ |
+| `B` | ば | ば | び | ぶ | べ | ぼ | びゃ | びゅ | びょ | びぇ |
+| `T` | ぱ | ぱ | ぴ | ぷ | ぺ | ぽ | ぴゃ | ぴゅ | ぴょ | ぴぇ |
+| `X` | ふぁ | ふぁ | ふぃ | ふゅ | ふぇ | ふぉ | てぃ | てゅ | とぅ | ふぇ |
+| `W J` | ゔ | ゔぁ | ゔぃ | ゔ | ゔぇ | ゔぉ | ゔゃ | ゔゅ | ゔょ |  |
+| `Q` | ぁ | ぁ | ぃ | ぅ | ぇ | ぉ | ゃ | ゅ | ょ |  |
 
 ## 全規則
 
@@ -56,6 +57,7 @@
 | `E P` | きゃ | kana | kya |
 | `E O` | きゅ | kana | kyu |
 | `E I` | きょ | kana | kyo |
+| `E N` | きぇ | kana | kye |
 | `S` | さ | kana | sa |
 | `S H` | さ | kana | sa |
 | `S K` | し | kana | shi |
@@ -65,6 +67,7 @@
 | `S P` | しゃ | kana | sha |
 | `S O` | しゅ | kana | shu |
 | `S I` | しょ | kana | sho |
+| `S N` | しぇ | kana | sye |
 | `F` | た | kana | ta |
 | `F H` | た | kana | ta |
 | `F K` | ち | kana | ti |
@@ -74,6 +77,7 @@
 | `F P` | ちゃ | kana | tya |
 | `F O` | ちゅ | kana | tyu |
 | `F I` | ちょ | kana | tyo |
+| `F N` | ちぇ | kana | tye |
 | `D` | な | kana | na |
 | `D H` | な | kana | na |
 | `D K` | に | kana | ni |
@@ -83,6 +87,7 @@
 | `D P` | にゃ | kana | nya |
 | `D O` | にゅ | kana | nyu |
 | `D I` | にょ | kana | nyo |
+| `D N` | にぇ | kana | nye |
 | `G` | は | kana | ha |
 | `G H` | は | kana | ha |
 | `G K` | ひ | kana | hi |
@@ -92,6 +97,7 @@
 | `G P` | ひゃ | kana | hya |
 | `G O` | ひゅ | kana | hyu |
 | `G I` | ひょ | kana | hyo |
+| `G N` | ひぇ | kana | hye |
 | `V` | ま | kana | ma |
 | `V H` | ま | kana | ma |
 | `V K` | み | kana | mi |
@@ -101,6 +107,7 @@
 | `V P` | みゃ | kana | mya |
 | `V O` | みゅ | kana | myu |
 | `V I` | みょ | kana | myo |
+| `V N` | みぇ | kana | mye |
 | `R` | ら | kana | ra |
 | `R H` | ら | kana | ra |
 | `R K` | り | kana | ri |
@@ -110,6 +117,7 @@
 | `R P` | りゃ | kana | rya |
 | `R O` | りゅ | kana | ryu |
 | `R I` | りょ | kana | ryo |
+| `R N` | りぇ | kana | rye |
 | `W` | わ | kana | wa |
 | `W H` | わ | kana | wa |
 | `W K` | うぃ | kana | wi |
@@ -128,6 +136,7 @@
 | `A P` | ぎゃ | kana | gya |
 | `A O` | ぎゅ | kana | gyu |
 | `A I` | ぎょ | kana | gyo |
+| `A N` | ぎぇ | kana | gye |
 | `Z` | ざ | kana | za |
 | `Z H` | ざ | kana | za |
 | `Z K` | じ | kana | zi |
@@ -137,6 +146,7 @@
 | `Z P` | じゃ | kana | zya |
 | `Z O` | じゅ | kana | zyu |
 | `Z I` | じょ | kana | zyo |
+| `Z N` | じぇ | kana | zye |
 | `C` | だ | kana | da |
 | `C H` | だ | kana | da |
 | `C K` | ぢ | kana | di |
@@ -146,6 +156,7 @@
 | `C P` | でぃ | kana | deli |
 | `C O` | でゅ | kana | delyu |
 | `C I` | どぅ | kana | dolu |
+| `C N` | ぢぇ | kana | dye |
 | `B` | ば | kana | ba |
 | `B H` | ば | kana | ba |
 | `B K` | び | kana | bi |
@@ -155,6 +166,7 @@
 | `B P` | びゃ | kana | bya |
 | `B O` | びゅ | kana | byu |
 | `B I` | びょ | kana | byo |
+| `B N` | びぇ | kana | bye |
 | `T` | ぱ | kana | pa |
 | `T H` | ぱ | kana | pa |
 | `T K` | ぴ | kana | pi |
@@ -164,6 +176,7 @@
 | `T P` | ぴゃ | kana | pya |
 | `T O` | ぴゅ | kana | pyu |
 | `T I` | ぴょ | kana | pyo |
+| `T N` | ぴぇ | kana | pye |
 | `X` | ふぁ | kana | fa |
 | `X H` | ふぁ | kana | fa |
 | `X K` | ふぃ | kana | fi |
@@ -173,6 +186,7 @@
 | `X P` | てぃ | kana | teli |
 | `X O` | てゅ | kana | telyu |
 | `X I` | とぅ | kana | tolu |
+| `X N` | ふぇ | kana | fe |
 | `H` | あ | kana | a |
 | `K` | い | kana | i |
 | `J` | う | kana | u |
@@ -181,9 +195,9 @@
 | `P` | や | kana | ya |
 | `O` | ゆ | kana | yu |
 | `I` | よ | kana | yo |
-| `N` | ん | kana | nn |
-| `U` | ん | kana | nn |
-| `M` | っ | kana | ltu |
+| `N` | いぇ | kana | ye |
+| `U` | っ | kana | ltu |
+| `M` | ん | kana | nn |
 | `Y` | ー | kana | - |
 | `/` | ？ | kana | ? |
 | `Shift+/` | ・ | kana | / |
@@ -197,9 +211,6 @@
 | `Q I` | ょ | kana | lyo |
 | `Q` | ぁ | kana | la |
 | `Q W` | ゎ | kana | lwa |
-| `Q ,` | ， | kana | Unicode（確定文字） |
-| `Q .` | ． | kana | Unicode（確定文字） |
-| `Q /` | ／ | kana | Unicode（確定文字） |
 | `W J H` | ゔぁ | kana | va |
 | `W J K` | ゔぃ | kana | vi |
 | `W J J` | ゔ | kana | vu |
@@ -208,67 +219,7 @@
 | `W J P` | ゔゃ | kana | vya |
 | `W J O` | ゔゅ | kana | vyu |
 | `W J I` | ゔょ | kana | vyo |
-| `Q Q H` | ← | arrows | zh |
-| `Q Q J` | ↓ | arrows | zj |
-| `Q Q K` | ↑ | arrows | zk |
-| `Q Q L` | → | arrows | zl |
-| `Q Q 1` | ○ | symbols | Unicode（確定文字） |
-| `Q Q Shift+1` | ● | symbols | Unicode（確定文字） |
-| `Q Q 2` | ▽ | symbols | Unicode（確定文字） |
-| `Q Q Shift+2` | ▼ | symbols | Unicode（確定文字） |
-| `Q Q 3` | △ | symbols | Unicode（確定文字） |
-| `Q Q Shift+3` | ▲ | symbols | Unicode（確定文字） |
-| `Q Q 4` | □ | symbols | Unicode（確定文字） |
-| `Q Q Shift+4` | ■ | symbols | Unicode（確定文字） |
-| `Q Q 5` | ◇ | symbols | Unicode（確定文字） |
-| `Q Q Shift+5` | ◆ | symbols | Unicode（確定文字） |
-| `Q Q 6` | ☆ | symbols | Unicode（確定文字） |
-| `Q Q Shift+6` | ★ | symbols | Unicode（確定文字） |
-| `Q Q 7` | ◎ | symbols | Unicode（確定文字） |
-| `Q Q Shift+7` | ￡ | symbols | Unicode（確定文字） |
-| `Q Q 8` | ￠ | symbols | Unicode（確定文字） |
-| `Q Q Shift+8` | 【 | symbols | Unicode（確定文字） |
-| `Q Q 9` | ♂ | symbols | Unicode（確定文字） |
-| `Q Q Shift+9` | 】 | symbols | Unicode（確定文字） |
-| `Q Q 0` | ♀ | symbols | Unicode（確定文字） |
-| `Q Q JIS-_` | ∴ | symbols | Unicode（確定文字） |
-| `Q Q Shift+-` | ≒ | symbols | Unicode（確定文字） |
-| `Q Q Shift+;` | ± | symbols | Unicode（確定文字） |
-| `Q Q JIS-Yen` | ＼ | symbols | Unicode（確定文字） |
-| `Q Q Shift+JIS-Yen` | ∥ | symbols | Unicode（確定文字） |
-| `Q Q Shift+@` | ´ | symbols | Unicode（確定文字） |
-| `Q Q Shift+^` | ¨ | symbols | Unicode（確定文字） |
-| `Q Q Q` | ゛ | symbols | Unicode（確定文字） |
-| `Q Q P` | ～ | symbols | Unicode（確定文字） |
-| `Q Q :` | ゜ | symbols | Unicode（確定文字） |
-| `Q Q N` | ′ | symbols | Unicode（確定文字） |
-| `Q Q M` | ″ | symbols | Unicode（確定文字） |
-| `Q Q ;` | ； | symbols | Unicode（確定文字） |
-| `Q Q ,` | ， | symbols | Unicode（確定文字） |
-| `Q Q Shift+,` | ≦ | symbols | Unicode（確定文字） |
-| `Q Q .` | ． | symbols | Unicode（確定文字） |
-| `Q Q Shift+.` | ≧ | symbols | Unicode（確定文字） |
-| `Q Q /` | ／ | symbols | Unicode（確定文字） |
-| `Q Q E` | 々 | symbols | Unicode（確定文字） |
-| `Q Q T` | 〆 | symbols | Unicode（確定文字） |
-| `Q Q S` | ヽ | symbols | Unicode（確定文字） |
-| `Q Q D` | ゝ | symbols | Unicode（確定文字） |
-| `Q Q F` | 〃 | symbols | Unicode（確定文字） |
-| `Q Q G` | ‐ | symbols | Unicode（確定文字） |
-| `Q Q C` | 〇 | symbols | Unicode（確定文字） |
-| `Q Q X` | × | symbols | Unicode（確定文字） |
-| `Q Q A` | ※ | symbols | Unicode（確定文字） |
-| `Q Q B` | ° | symbols | Unicode（確定文字） |
-| `Q Q W` | w | symbols | Unicode（確定文字） |
-| `Q Q Y` | 〒 | symbols | Unicode（確定文字） |
-| `Q Q [` | ［ | symbols | Unicode（確定文字） |
-| `Q Q ]` | ］ | symbols | Unicode（確定文字） |
-| `Q Q Shift+[` | 《 | symbols | Unicode（確定文字） |
-| `Q Q Shift+]` | 》 | symbols | Unicode（確定文字） |
-| `Q Q I` | 【 | symbols | Unicode（確定文字） |
-| `Q Q O` | 】 | symbols | Unicode（確定文字） |
 
 句読点 `,` `.` と単独の括弧は入力方式の設定に従います。
 ヵ・ヶの直接規則はありません。「かげつ」「かしょ」などからかな漢字変換します。
-WKR macOS の記号Unicode出力は未確定文字列中では抑止されます。Google / azooKey の記号は各IMEの変換対象です。
 Google / azooKey のv2テーブルは生成と構造を検査済みですが、各IMEでの実入力は未確認です。

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "name": "わから配列 v2",
-  "version": "2.0.0-beta.3",
+  "version": "2.0.0-beta.4",
   "status": "public-beta",
-  "description": "2.0.0-beta.3でPの特殊列（短縮形）を廃止し、やの列をP、んの2つ目のキーをU、記号・矢印の前置をQ Qにした。版を固定して利用し、変更時は配列版を更新する。",
+  "description": "2.0.0-beta.4でんをMの1キー、っをU、Nを単打いぇ・行キーの後のぇ段にし、記号・矢印の規則（Q Qの後の59件とQの後の全角，．／）を廃止した。版を固定して利用し、変更時は配列版を更新する。",
   "rules": [
     {
       "id": "e-ka",
@@ -101,6 +101,17 @@
       "output": "きょ",
       "delivery": "romaji",
       "romaji": "kyo",
+      "group": "kana"
+    },
+    {
+      "id": "en-kye",
+      "keys": [
+        "e",
+        "n"
+      ],
+      "output": "きぇ",
+      "delivery": "romaji",
+      "romaji": "kye",
       "group": "kana"
     },
     {
@@ -202,6 +213,17 @@
       "group": "kana"
     },
     {
+      "id": "sn-she",
+      "keys": [
+        "s",
+        "n"
+      ],
+      "output": "しぇ",
+      "delivery": "romaji",
+      "romaji": "sye",
+      "group": "kana"
+    },
+    {
       "id": "f-ta",
       "keys": [
         "f"
@@ -297,6 +319,17 @@
       "output": "ちょ",
       "delivery": "romaji",
       "romaji": "tyo",
+      "group": "kana"
+    },
+    {
+      "id": "fn-che",
+      "keys": [
+        "f",
+        "n"
+      ],
+      "output": "ちぇ",
+      "delivery": "romaji",
+      "romaji": "tye",
       "group": "kana"
     },
     {
@@ -398,6 +431,17 @@
       "group": "kana"
     },
     {
+      "id": "dn-nye",
+      "keys": [
+        "d",
+        "n"
+      ],
+      "output": "にぇ",
+      "delivery": "romaji",
+      "romaji": "nye",
+      "group": "kana"
+    },
+    {
       "id": "g-ha",
       "keys": [
         "g"
@@ -493,6 +537,17 @@
       "output": "ひょ",
       "delivery": "romaji",
       "romaji": "hyo",
+      "group": "kana"
+    },
+    {
+      "id": "gn-hye",
+      "keys": [
+        "g",
+        "n"
+      ],
+      "output": "ひぇ",
+      "delivery": "romaji",
+      "romaji": "hye",
       "group": "kana"
     },
     {
@@ -594,6 +649,17 @@
       "group": "kana"
     },
     {
+      "id": "vn-mye",
+      "keys": [
+        "v",
+        "n"
+      ],
+      "output": "みぇ",
+      "delivery": "romaji",
+      "romaji": "mye",
+      "group": "kana"
+    },
+    {
       "id": "r-ra",
       "keys": [
         "r"
@@ -689,6 +755,17 @@
       "output": "りょ",
       "delivery": "romaji",
       "romaji": "ryo",
+      "group": "kana"
+    },
+    {
+      "id": "rn-rye",
+      "keys": [
+        "r",
+        "n"
+      ],
+      "output": "りぇ",
+      "delivery": "romaji",
+      "romaji": "rye",
       "group": "kana"
     },
     {
@@ -888,6 +965,17 @@
       "group": "kana"
     },
     {
+      "id": "an-gye",
+      "keys": [
+        "a",
+        "n"
+      ],
+      "output": "ぎぇ",
+      "delivery": "romaji",
+      "romaji": "gye",
+      "group": "kana"
+    },
+    {
       "id": "z-za",
       "keys": [
         "z"
@@ -983,6 +1071,17 @@
       "output": "じょ",
       "delivery": "romaji",
       "romaji": "zyo",
+      "group": "kana"
+    },
+    {
+      "id": "zn-je",
+      "keys": [
+        "z",
+        "n"
+      ],
+      "output": "じぇ",
+      "delivery": "romaji",
+      "romaji": "zye",
       "group": "kana"
     },
     {
@@ -1084,6 +1183,17 @@
       "group": "kana"
     },
     {
+      "id": "cn-dye",
+      "keys": [
+        "c",
+        "n"
+      ],
+      "output": "ぢぇ",
+      "delivery": "romaji",
+      "romaji": "dye",
+      "group": "kana"
+    },
+    {
       "id": "b-ba",
       "keys": [
         "b"
@@ -1179,6 +1289,17 @@
       "output": "びょ",
       "delivery": "romaji",
       "romaji": "byo",
+      "group": "kana"
+    },
+    {
+      "id": "bn-bye",
+      "keys": [
+        "b",
+        "n"
+      ],
+      "output": "びぇ",
+      "delivery": "romaji",
+      "romaji": "bye",
       "group": "kana"
     },
     {
@@ -1280,6 +1401,17 @@
       "group": "kana"
     },
     {
+      "id": "tn-pye",
+      "keys": [
+        "t",
+        "n"
+      ],
+      "output": "ぴぇ",
+      "delivery": "romaji",
+      "romaji": "pye",
+      "group": "kana"
+    },
+    {
       "id": "x-fa",
       "keys": [
         "x"
@@ -1378,6 +1510,17 @@
       "group": "kana"
     },
     {
+      "id": "xn-fe",
+      "keys": [
+        "x",
+        "n"
+      ],
+      "output": "ふぇ",
+      "delivery": "romaji",
+      "romaji": "fe",
+      "group": "kana"
+    },
+    {
       "id": "h-a",
       "keys": [
         "h"
@@ -1458,33 +1601,33 @@
       "group": "kana"
     },
     {
-      "id": "n-n",
+      "id": "n-ye",
       "keys": [
         "n"
       ],
-      "output": "ん",
+      "output": "いぇ",
       "delivery": "romaji",
-      "romaji": "nn",
+      "romaji": "ye",
       "group": "kana"
     },
     {
-      "id": "u-n",
+      "id": "u-small-tsu",
       "keys": [
         "u"
-      ],
-      "output": "ん",
-      "delivery": "romaji",
-      "romaji": "nn",
-      "group": "kana"
-    },
-    {
-      "id": "m-small-tsu",
-      "keys": [
-        "m"
       ],
       "output": "っ",
       "delivery": "romaji",
       "romaji": "ltu",
+      "group": "kana"
+    },
+    {
+      "id": "m-n",
+      "keys": [
+        "m"
+      ],
+      "output": "ん",
+      "delivery": "romaji",
+      "romaji": "nn",
       "group": "kana"
     },
     {
@@ -1627,36 +1770,6 @@
       "group": "kana"
     },
     {
-      "id": "qcomma-fullwidth-comma",
-      "keys": [
-        "q",
-        ","
-      ],
-      "output": "，",
-      "delivery": "unicode",
-      "group": "kana"
-    },
-    {
-      "id": "qperiod-fullwidth-period",
-      "keys": [
-        "q",
-        "."
-      ],
-      "output": "．",
-      "delivery": "unicode",
-      "group": "kana"
-    },
-    {
-      "id": "qslash-fullwidth-slash",
-      "keys": [
-        "q",
-        "/"
-      ],
-      "output": "／",
-      "delivery": "unicode",
-      "group": "kana"
-    },
-    {
       "id": "wjh-va",
       "keys": [
         "w",
@@ -1751,659 +1864,6 @@
       "delivery": "romaji",
       "romaji": "vyo",
       "group": "kana"
-    },
-    {
-      "id": "qqh-left",
-      "keys": [
-        "q",
-        "q",
-        "h"
-      ],
-      "output": "←",
-      "delivery": "romaji",
-      "romaji": "zh",
-      "group": "arrows"
-    },
-    {
-      "id": "qqj-down",
-      "keys": [
-        "q",
-        "q",
-        "j"
-      ],
-      "output": "↓",
-      "delivery": "romaji",
-      "romaji": "zj",
-      "group": "arrows"
-    },
-    {
-      "id": "qqk-up",
-      "keys": [
-        "q",
-        "q",
-        "k"
-      ],
-      "output": "↑",
-      "delivery": "romaji",
-      "romaji": "zk",
-      "group": "arrows"
-    },
-    {
-      "id": "qql-right",
-      "keys": [
-        "q",
-        "q",
-        "l"
-      ],
-      "output": "→",
-      "delivery": "romaji",
-      "romaji": "zl",
-      "group": "arrows"
-    },
-    {
-      "id": "qq1-open-circle",
-      "keys": [
-        "q",
-        "q",
-        "1"
-      ],
-      "output": "○",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-shift1-filled-circle",
-      "keys": [
-        "q",
-        "q",
-        "Shift+1"
-      ],
-      "output": "●",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq2-open-down-triangle",
-      "keys": [
-        "q",
-        "q",
-        "2"
-      ],
-      "output": "▽",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-shift2-filled-down-triangle",
-      "keys": [
-        "q",
-        "q",
-        "Shift+2"
-      ],
-      "output": "▼",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq3-open-up-triangle",
-      "keys": [
-        "q",
-        "q",
-        "3"
-      ],
-      "output": "△",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-shift3-filled-up-triangle",
-      "keys": [
-        "q",
-        "q",
-        "Shift+3"
-      ],
-      "output": "▲",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq4-open-square",
-      "keys": [
-        "q",
-        "q",
-        "4"
-      ],
-      "output": "□",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-shift4-filled-square",
-      "keys": [
-        "q",
-        "q",
-        "Shift+4"
-      ],
-      "output": "■",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq5-open-diamond",
-      "keys": [
-        "q",
-        "q",
-        "5"
-      ],
-      "output": "◇",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-shift5-filled-diamond",
-      "keys": [
-        "q",
-        "q",
-        "Shift+5"
-      ],
-      "output": "◆",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq6-open-star",
-      "keys": [
-        "q",
-        "q",
-        "6"
-      ],
-      "output": "☆",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-shift6-filled-star",
-      "keys": [
-        "q",
-        "q",
-        "Shift+6"
-      ],
-      "output": "★",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq7-double-circle",
-      "keys": [
-        "q",
-        "q",
-        "7"
-      ],
-      "output": "◎",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-shift7-pound",
-      "keys": [
-        "q",
-        "q",
-        "Shift+7"
-      ],
-      "output": "￡",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq8-cent",
-      "keys": [
-        "q",
-        "q",
-        "8"
-      ],
-      "output": "￠",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-shift8-bracket-open",
-      "keys": [
-        "q",
-        "q",
-        "Shift+8"
-      ],
-      "output": "【",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq9-male",
-      "keys": [
-        "q",
-        "q",
-        "9"
-      ],
-      "output": "♂",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-shift9-bracket-close",
-      "keys": [
-        "q",
-        "q",
-        "Shift+9"
-      ],
-      "output": "】",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq0-female",
-      "keys": [
-        "q",
-        "q",
-        "0"
-      ],
-      "output": "♀",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-underscore-therefore",
-      "keys": [
-        "q",
-        "q",
-        "JIS-_"
-      ],
-      "output": "∴",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-equals-approximately",
-      "keys": [
-        "q",
-        "q",
-        "Shift+-"
-      ],
-      "output": "≒",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-plus-plus-minus",
-      "keys": [
-        "q",
-        "q",
-        "Shift+;"
-      ],
-      "output": "±",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-yen-fullwidth-backslash",
-      "keys": [
-        "q",
-        "q",
-        "JIS-Yen"
-      ],
-      "output": "＼",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-bar-parallel",
-      "keys": [
-        "q",
-        "q",
-        "Shift+JIS-Yen"
-      ],
-      "output": "∥",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-backtick-acute",
-      "keys": [
-        "q",
-        "q",
-        "Shift+@"
-      ],
-      "output": "´",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-tilde-diaeresis",
-      "keys": [
-        "q",
-        "q",
-        "Shift+^"
-      ],
-      "output": "¨",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqq-dakuten",
-      "keys": [
-        "q",
-        "q",
-        "q"
-      ],
-      "output": "゛",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqp-wave-dash",
-      "keys": [
-        "q",
-        "q",
-        "p"
-      ],
-      "output": "～",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-colon-handakuten",
-      "keys": [
-        "q",
-        "q",
-        ":"
-      ],
-      "output": "゜",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqn-prime",
-      "keys": [
-        "q",
-        "q",
-        "n"
-      ],
-      "output": "′",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqm-double-prime",
-      "keys": [
-        "q",
-        "q",
-        "m"
-      ],
-      "output": "″",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-semicolon-fullwidth",
-      "keys": [
-        "q",
-        "q",
-        ";"
-      ],
-      "output": "；",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-comma-fullwidth",
-      "keys": [
-        "q",
-        "q",
-        ","
-      ],
-      "output": "，",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-less-equal",
-      "keys": [
-        "q",
-        "q",
-        "Shift+,"
-      ],
-      "output": "≦",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-period-fullwidth",
-      "keys": [
-        "q",
-        "q",
-        "."
-      ],
-      "output": "．",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-greater-equal",
-      "keys": [
-        "q",
-        "q",
-        "Shift+."
-      ],
-      "output": "≧",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-slash-fullwidth",
-      "keys": [
-        "q",
-        "q",
-        "/"
-      ],
-      "output": "／",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqe-iteration",
-      "keys": [
-        "q",
-        "q",
-        "e"
-      ],
-      "output": "々",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqt-shime",
-      "keys": [
-        "q",
-        "q",
-        "t"
-      ],
-      "output": "〆",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqs-katakana-repeat",
-      "keys": [
-        "q",
-        "q",
-        "s"
-      ],
-      "output": "ヽ",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqd-hiragana-repeat",
-      "keys": [
-        "q",
-        "q",
-        "d"
-      ],
-      "output": "ゝ",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqf-ditto",
-      "keys": [
-        "q",
-        "q",
-        "f"
-      ],
-      "output": "〃",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqg-hyphen",
-      "keys": [
-        "q",
-        "q",
-        "g"
-      ],
-      "output": "‐",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqc-ideographic-zero",
-      "keys": [
-        "q",
-        "q",
-        "c"
-      ],
-      "output": "〇",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqx-multiply",
-      "keys": [
-        "q",
-        "q",
-        "x"
-      ],
-      "output": "×",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqa-reference-mark",
-      "keys": [
-        "q",
-        "q",
-        "a"
-      ],
-      "output": "※",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqb-degree",
-      "keys": [
-        "q",
-        "q",
-        "b"
-      ],
-      "output": "°",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqw-literal-w",
-      "keys": [
-        "q",
-        "q",
-        "w"
-      ],
-      "output": "w",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqy-postal-mark",
-      "keys": [
-        "q",
-        "q",
-        "y"
-      ],
-      "output": "〒",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-leftbracket-fullwidth",
-      "keys": [
-        "q",
-        "q",
-        "["
-      ],
-      "output": "［",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-rightbracket-fullwidth",
-      "keys": [
-        "q",
-        "q",
-        "]"
-      ],
-      "output": "］",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-leftbrace-double-angle",
-      "keys": [
-        "q",
-        "q",
-        "Shift+["
-      ],
-      "output": "《",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qq-rightbrace-double-angle",
-      "keys": [
-        "q",
-        "q",
-        "Shift+]"
-      ],
-      "output": "》",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqi-lenticular-open",
-      "keys": [
-        "q",
-        "q",
-        "i"
-      ],
-      "output": "【",
-      "delivery": "unicode",
-      "group": "symbols"
-    },
-    {
-      "id": "qqo-lenticular-close",
-      "keys": [
-        "q",
-        "q",
-        "o"
-      ],
-      "output": "】",
-      "delivery": "unicode",
-      "group": "symbols"
     }
   ]
 }
