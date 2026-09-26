@@ -6,7 +6,7 @@
 
 公開配布は `python3 scripts/package.py`。練習帳のzipと、まだReleaseしていない配列版の仕様zip（配列JSON・配列表・IMEテーブル・文書・その版の `docs/release-<配列版>.md`）を、`build/distribution/<commit>/`へ `manifest.json`・`SHA256SUMS` とともに出力します。既存候補は別のcommitの出力先に保持します。Gitの履歴をzipへ含めず、含めるパスを固定します。公開前に `docs/verification.md` の未確認事項を見直します。
 
-Release済みの配列版（`package.py` の `RELEASED_LAYOUTS`。現在は2.0.0-beta.1）の仕様ZIPは再生成しません。配列版をReleaseしたら、次の変更でその版を `RELEASED_LAYOUTS` に加えます。v1.1の保全テーブルは専用の保存資料ZIPで配布します。
+Release済みの配列版（`package.py` の `RELEASED_LAYOUTS`。現在は2.0.0-beta.1〜2.0.0-beta.3）の仕様ZIPは再生成しません。配列版をReleaseしたら、次の変更でその版を `RELEASED_LAYOUTS` に加えます。v1.1の保全テーブルは専用の保存資料ZIPで配布します。
 
 ## v1.1の保存資料を作る
 

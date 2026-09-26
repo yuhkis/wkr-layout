@@ -51,8 +51,7 @@ def encode(text, shortcuts=False):
                 try:
                     if decode(keys)==text[pos:]: found.append(keys)
                 except KeyError: pass
-        # ん has two keys since 2.0.0-beta.3; lessons show U, the one added for it.
-        paths[pos]=sorted(found,key=lambda k:(len(k),k.count('n'),k))[:32]
+        paths[pos]=sorted(found,key=lambda k:(len(k),k))[:32]
     if not paths.get(0): raise ValueError('No canonical spelling for lesson target')
     return paths[0][0]
 
@@ -85,8 +84,8 @@ def tables():
         reading=(marker[ks[:-1]] if len(ks)>1 else '')+char(ks[-1])
         if ks in PREFIXES: google.append((reading,'',marker[ks]))
         else: google.append((reading,r['output'],''))
-    # A prefix with no output of its own (Q Q, the symbol layer) is reached
-    # from the state of the keys before it, like any other rule.
+    # A prefix with no output of its own is reached from the state of the
+    # keys before it, like any other rule.
     for p in PREFIXES:
         if p not in BY_KEYS:
             google.append(((marker[p[:-1]] if len(p)>1 else '')+char(p[-1]),'',marker[p]))
@@ -108,7 +107,7 @@ def tables():
 # by what it does alone. Read off the rules, so it cannot drift from them.
 KEY_ROWS=['qwertyuiop','asdfghjkl;','zxcvbnm,./']
 FINGERS=['小指','薬指','中指','人差し指','人差し指','人差し指','人差し指','中指','薬指','小指']
-COLUMNS=[('h','あ段'),('k','い段'),('j','う段'),(';','え段'),('l','お段'),('p','ゃ'),('o','ゅ'),('i','ょ')]
+COLUMNS=[('h','あ段'),('k','い段'),('j','う段'),(';','え段'),('l','お段'),('p','ゃ'),('o','ゅ'),('i','ょ'),('n','ぇ')]
 def cap(k):return k.upper() if k.isalpha() else k
 def row_keys():
     # Keys with a kana of their own that other rules continue from, in keyboard order.
@@ -144,8 +143,15 @@ def keymap_svg():
         if k in columns:return 'column'
         if (k,) in BY_KEYS:return 'single'
         return 'pass'
-    sub={c:n for c,n in COLUMNS};sub.update({'q':'Q Q 記号','u':'','n':'','m':'','y':'','/':'Shift で ・'})
-    top=34;width=int(pad*2+u*10.75);height=top+pad*2+u*3+178
+    sub={c:n for c,n in COLUMNS};sub.update({'q':'小書き','u':'','m':'','y':'','/':'Shift で ・'})
+    # Each legend is one or two lines, so none runs past the right edge.
+    legend=[('row',['左手の行キー。単打でその行のあ段（E＝か）']),
+            ('column',['右手の段キー。単打で あいうえお・や ゆ よ・いぇ','行キーの後で段を選ぶ（E K＝き、E P＝きゃ、E N＝きぇ）']),
+            ('single',['単打だけのキー（ん・っ・ー・？）','行キーの後でも行のあ段を確定してから続く（E M＝かん、E U＝かっ）']),
+            ('small',['小書きの行（Q＝ぁ、Q K＝ぃ、Q P＝ゃ、Q W＝ゎ）']),
+            ('pass',['入力方式の句読点の設定のまま通す（、 。）'])]
+    top=34;width=int(pad*2+u*10.75);first=top+pad+u*3+22
+    height=first+sum(28+20*(len(t)-1) for _,t in legend)-28+pad+24
     esc=lambda t:t.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;')
     out=[f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" font-family="Hiragino Sans, Hiragino Kaku Gothic ProN, Noto Sans JP, Yu Gothic, Meiryo, sans-serif">',
          f'<title>わから配列 {esc(SPEC["version"])} のキー配置</title>',
@@ -159,13 +165,12 @@ def keymap_svg():
             role=key_role(k);size=22 if len(role)<=2 else 16
             out.append(f'<text x="{x+w/2:.0f}" y="{y+40}" font-size="{size}" font-weight="700" text-anchor="middle" fill="#111827">{esc(role)}</text>')
             if sub.get(k):out.append(f'<text x="{x+w/2:.0f}" y="{y+w-6}" font-size="10" text-anchor="middle" fill="#4b5563">{esc(sub[k])}</text>')
-    y=top+pad+u*3+22
-    legend=[('row','左手の行キー。単打でその行のあ段（E＝か）'),('column','右手の段キー。単打で あいうえお・や ゆ よ、行キーの後で段を選ぶ（E K＝き、E P＝きゃ）'),
-            ('single','単打だけのキー（ん・っ・ー・？）。行キーの後でも行のあ段を確定してから続く（E U＝かん）'),('small','小書きの行（Q＝ぁ、Q P＝ゃ、Q W＝ゎ）。Q Q の後で記号・矢印（Q Q L＝→）'),
-            ('pass','入力方式の句読点の設定のまま通す（、 。）')]
-    for i,(k,text) in enumerate(legend):
-        out.append(f'<rect x="{pad}" y="{y+i*28-14}" width="18" height="18" rx="4" fill="{fill[k]}" stroke="#6b7280"/>')
-        out.append(f'<text x="{pad+28}" y="{y+i*28}" font-size="14" fill="#111827">{esc(text)}</text>')
+    y=first
+    for k,texts in legend:
+        out.append(f'<rect x="{pad}" y="{y-14}" width="18" height="18" rx="4" fill="{fill[k]}" stroke="#6b7280"/>')
+        for j,text in enumerate(texts):
+            out.append(f'<text x="{pad+28}" y="{y+j*20}" font-size="14" fill="#111827">{esc(text)}</text>')
+        y+=28+20*(len(texts)-1)
     out.append('</svg>')
     return '\n'.join(out)+'\n'
 
@@ -175,10 +180,11 @@ def reference():
            '## ひと目で','',
            '左手の行キーで行（子音）を、右手の段キーで段（母音）を選びます。行キー単打はあ段で、`W E R` は「わから」、`E K` は「き」です。',
            '各キーが単打で出すものを、JISキーボードの位置で示します。','']+keymap_table()+['',
-           '- `U` と `N` はどちらも ん、`M` は っ、`Y` は ー、`/` は ？、Shift+`/` は ・ です。`,` `.` は入力方式の句読点設定のまま通します。',
-           '- 行キーの後に段キー（`H` `K` `J` `;` `L` `P` `O` `I`）以外を打つと、行のあ段を確定してからそのキーの文字になります（`E U` かん、`E Y` かー）。',
+           '- `M` は ん、`U` は っ、`Y` は ー、`/` は ？、Shift+`/` は ・ です。`,` `.` は入力方式の句読点設定のまま通します。',
+           '- `N` は単打で いぇ、行キーの後で ぇ の段です（`E N` きぇ、`S N` しぇ、`F N` ちぇ）。',
+           '- 行キーの後に段キー（`H` `K` `J` `;` `L` `P` `O` `I` `N`）以外を打つと、行のあ段を確定してからそのキーの文字になります（`E M` かん、`E U` かっ、`E Y` かー）。',
            '  あ段のかなの直後に段キーのかなを続けるときは `H` を明示します（かい＝`E H K`、かや＝`E H P`）。',
-           '- 記号・矢印は `Q` `Q` の後に1打です（`Q Q L` →、`Q Q H` ←、`Q Q A` ※）。全件は下の一覧にあります。','',
+           '- 記号・矢印を出す規則はありません。IMEのかな漢字変換で入力します。','',
            '## 行と段の組み合わせ','',
            '行キー（`W J` は ゔ の行で、3打鍵目で段を選ぶ）の後に段キーを打ちます。表は五十音の順です。','']+grid_table()+['',
            '## 全規則','',
@@ -188,7 +194,6 @@ def reference():
         lines.append(f"| `{keys}` | {r['output']} | {r['group']} | {r.get('romaji','Unicode（確定文字）')} |")
     lines+=['','句読点 `,` `.` と単独の括弧は入力方式の設定に従います。',
             'ヵ・ヶの直接規則はありません。「かげつ」「かしょ」などからかな漢字変換します。',
-            'WKR macOS の記号Unicode出力は未確定文字列中では抑止されます。Google / azooKey の記号は各IMEの変換対象です。',
             'Google / azooKey のv2テーブルは生成と構造を検査済みですが、各IMEでの実入力は未確認です。','']
     return '\n'.join(lines)
 
