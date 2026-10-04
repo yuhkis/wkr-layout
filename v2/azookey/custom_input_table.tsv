@@ -20,28 +20,28 @@ sp	しゃ
 so	しゅ
 si	しょ
 sn	しぇ
-f{composition-separator}	た
-f{any character}	た{any character}
-fh	た
-fk	ち
-fj	つ
-f；	て
-fl	と
-fp	ちゃ
-fo	ちゅ
-fi	ちょ
-fn	ちぇ
-d{composition-separator}	な
-d{any character}	な{any character}
-dh	な
-dk	に
-dj	ぬ
-d；	ね
-dl	の
-dp	にゃ
-do	にゅ
-di	にょ
-dn	にぇ
+f{composition-separator}	な
+f{any character}	な{any character}
+fh	な
+fk	に
+fj	ぬ
+f；	ね
+fl	の
+fp	にゃ
+fo	にゅ
+fi	にょ
+fn	にぇ
+d{composition-separator}	た
+d{any character}	た{any character}
+dh	た
+dk	ち
+dj	つ
+d；	て
+dl	と
+dp	ちゃ
+do	ちゅ
+di	ちょ
+dn	ちぇ
 g{composition-separator}	は
 g{any character}	は{any character}
 gh	は

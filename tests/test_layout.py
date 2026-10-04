@@ -25,7 +25,7 @@ class LayoutTests(unittest.TestCase):
         self.assertEqual([r['keys'] for r in g.RULES if r['output']=='ん'],[['m']])
         self.assertEqual([r['keys'] for r in g.RULES if r['output']=='っ'],[['u']])
     def test_n_is_the_ye_column_after_a_row(self):
-        expected={'e':'きぇ','s':'しぇ','f':'ちぇ','d':'にぇ','g':'ひぇ','v':'みぇ','r':'りぇ','a':'ぎぇ','z':'じぇ','c':'ぢぇ','b':'びぇ','t':'ぴぇ','x':'ふぇ'}
+        expected={'e':'きぇ','s':'しぇ','d':'ちぇ','f':'にぇ','g':'ひぇ','v':'みぇ','r':'りぇ','a':'ぎぇ','z':'じぇ','c':'ぢぇ','b':'びぇ','t':'ぴぇ','x':'ふぇ'}
         self.assertEqual({ks[0]:r['output'] for ks,r in g.BY_KEYS.items() if len(ks)==2 and ks[1]=='n'},expected)
         self.assertNotIn(('w','j','n'),g.BY_KEYS)
     def test_ya_column_is_on_p_and_no_rule_follows_q_q(self):
@@ -38,6 +38,17 @@ class LayoutTests(unittest.TestCase):
             self.assertNotIn((row,'u'),g.BY_KEYS);self.assertNotIn((row,'y'),g.BY_KEYS)
         self.assertFalse(any(r['keys'][0]=='p' and len(r['keys'])>1 for r in g.RULES))
         self.assertFalse(any(r['keys'][:2]==['q','q'] for r in g.RULES))
+    def test_ta_row_on_d_na_row_on_f_and_adjacent_row_boundary(self):
+        expected={'d':['た','た','ち','つ','て','と','ちゃ','ちゅ','ちょ','ちぇ'],
+                  'f':['な','な','に','ぬ','ね','の','にゃ','にゅ','にょ','にぇ']}
+        suffixes=[(),('h',),('k',),('j',),(';',),('l',),('p',),('o',),('i',),('n',)]
+        for row,outputs in expected.items():
+            for tail,kana in zip(suffixes,outputs):
+                with self.subTest(row=row,tail=tail):self.assertEqual(g.decode([row,*tail]),kana)
+        self.assertEqual(g.decode(list('df')),'たな')
+        self.assertEqual(g.decode(list('fd')),'なた')
+        self.assertEqual(g.encode('たちつてと'),list('ddkdjd;dl'))
+        self.assertEqual(g.encode('なにぬねの'),list('ffkfjf;fl'))
     def test_all_lessons_use_current_rules(self):
         data=g.practice_data()
         self.assertEqual(len(data['lessons']),11)
