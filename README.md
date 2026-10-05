@@ -1,7 +1,7 @@
 # わから配列 v2 — 公開ベータ
 
 左手で行を、右手で段を選ぶ日本語入力配列です。`W E R` + Enter で「わから」、`E K` で「き」になります。
-このリポジトリが配列仕様と練習教材の正本です。**配列 2.0.0-beta.5 / 練習帳 0.5.0** の公開候補です。現在公開済みの配列とWebデモは2.0.0-beta.4 / 練習帳0.4.0です。
+このリポジトリが配列仕様と練習教材の正本です。**配列 2.0.0-beta.5 / 練習帳 0.5.0** を公開しています。Webデモも同じ配列・教材です。
 
 ## 2.0.0-beta.5 の配列
 
@@ -26,7 +26,9 @@ D/Fの行全体を入れ替え、20規則とその規則IDを変更しました�
 
 **[ブラウザでわから配列を体験する](https://yuhkis.github.io/wkr-layout/)** — アプリのインストール不要。ABC・英数で、いつものQWERTYキーボードから試せます。
 
-公開済みの[配列2.0.0-beta.4の配布zipとSHA256SUMS](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.4)は公式Releaseにあります。2.0.0-beta.5の配布物・Webデモは公開準備中です。以前の[2.0.0-beta.3](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.3)（ん＝N・U、っ＝M、記号・矢印＝Q Qの後、練習帳0.3.0）、[2.0.0-beta.2](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.2)（U＝や、P＝記号前置と特殊列、練習帳0.2.1）と[2.0.0-beta.1](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.1)（ん＝M、っ＝N、練習帳0.1.0）のReleaseも残しています。練習帳は0.2.0でQWERTY体験を追加しました。
+[配列2.0.0-beta.5・練習帳0.5.0の配布zipとSHA256SUMS](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.5)は公式Releaseにあります。以前の[2.0.0-beta.4](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.4)（D＝な行・F＝た行、練習帳0.4.0）、[2.0.0-beta.3](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.3)（ん＝N・U、っ＝M、記号・矢印＝Q Qの後、練習帳0.3.0）、[2.0.0-beta.2](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.2)（U＝や、P＝記号前置と特殊列、練習帳0.2.1）と[2.0.0-beta.1](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.1)（ん＝M、っ＝N、練習帳0.1.0）のReleaseも残しています。練習帳は0.2.0でQWERTY体験を追加しました。
+
+Releaseの署名tag `v2.0.0-beta.5` と添付は、監査済みの公開commit `fedd175d4d397ec39ed586e369552d8debbf884a` に固定しています。mainでは公開完了後の案内だけを更新し、配列171規則・教材・練習の処理は変えていません。添付内の文書は生成時点の記録で、「公開候補」などの注記を含みます。現在の公開状況はこのREADMEと公式Releaseで確認してください。
 
 ## 初めて使う方へ
 
@@ -64,7 +66,7 @@ node --test practice/*.test.cjs
 
 使い方と構成は [scripts/README.md](scripts/README.md)、教材とブラウザ版は [practice/README.md](practice/README.md)へ。
 教材を変えたら練習版、規則を変えたら配列版を更新し、WKR macOS側の同期スクリプトで固定commitから取り込みます。
-[公開ベータの検証記録](docs/verification.md)と[Release文案](docs/release-2.0.0-beta.5.md)に確認範囲を残します。
+[公開ベータの検証記録](docs/verification.md)と[Release情報](docs/release-2.0.0-beta.5.md)に確認範囲を残します。
 
 MIT License — [LICENSE](LICENSE)。背景と従来版の説明は[v1資料](docs/v1.md)に残しています。
 
