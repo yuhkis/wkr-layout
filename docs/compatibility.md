@@ -2,14 +2,14 @@
 
 | 対象 | 配列版 | 状態 |
 | --- | --- | --- |
-| このリポジトリのJSON・配列表 | 2.0.0-beta.5 | 公開候補、171規則。D＝た行・F＝な行。ほかは2.0.0-beta.4と同じ |
+| このリポジトリのJSON・配列表 | 2.0.0-beta.5 | 公開済み、171規則。D＝た行・F＝な行。ほかは2.0.0-beta.4と同じ |
 | [配列2.0.0-beta.4のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.4) | 2.0.0-beta.4 | 公開済み、171規則。D＝な行・F＝た行、ん＝M、っ＝U、N＝いぇ（行キーの後は ぇ の段）、や＝P、記号・矢印の規則なし、特殊列なし |
 | [配列2.0.0-beta.3のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.3) | 2.0.0-beta.3 | 以前の仕様zip、220規則。ん＝N・U、っ＝M、や＝P、記号・矢印＝Q Q の後 |
 | [配列2.0.0-beta.2のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.2) | 2.0.0-beta.2 | 以前の仕様zip、233規則。ん＝N、っ＝M、や＝U、記号前置と特殊列＝P |
 | [配列2.0.0-beta.1のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.1) | 2.0.0-beta.1 | 以前の仕様zip。ん＝M、っ＝N |
 | [WKR macOS v2 Public Beta 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) | アプリ0.8.0-public.beta.5 / 配列2.0.0-beta.1 | 固定commitから生成。Apple日本語入力の前段。2.0.0-beta.2以降への同期は未公開 |
-| このリポジトリの練習帳 | 練習0.5.0 / 配列2.0.0-beta.5 | 公開候補。ブラウザ・ZIP・macOS向けに同一教材を使用 |
-| 公開済みの[ブラウザデモ](https://yuhkis.github.io/wkr-layout/) | 練習0.4.0 / 配列2.0.0-beta.4 | 2.0.0-beta.5への配信更新は未実施 |
+| このリポジトリの練習帳 | 練習0.5.0 / 配列2.0.0-beta.5 | 公開済み。ブラウザ・ZIPは同一教材。macOS向けにも同じソースを使用可能 |
+| 公開済みの[ブラウザデモ](https://yuhkis.github.io/wkr-layout/) | 練習0.5.0 / 配列2.0.0-beta.5 | Releaseと同じ規則・教材。サイト生成物9ファイルのうちWeb本文8ファイルを配信 |
 | macOS同梱の練習帳 | 練習0.1.0 / 配列2.0.0-beta.1 | 0.8.0-public.beta.5に同梱 |
 | v2/ のGoogle日本語入力・azooKey | 2.0.0-beta.5 | 生成・構造検査済み、実IME未確認 |
 | [WKR macOS 0.7.0 保存ソース](https://github.com/yuhkis/wkr-macos/releases/tag/v0.7.0-archive.1) | 保存版0.7.0-archive.1 / 配列1.1.0 | v1用。現行Public v2とは別 |

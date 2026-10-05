@@ -122,3 +122,11 @@ Google日本語入力とazooKeyのテーブルは別の入力経路です。Appl
 - 観測した通信はlocalhostの静的ファイルのGETだけで、入力・採点中の追加通信は0件でした。コンソールのエラー・警告は0件でした。このブラウザ確認では本人の入力や既存成績を使用していません。
 
 未確認: 実機WKR・Apple日本語入力との組み合わせ、Google日本語入力・azooKeyでの実入力、Safari / Firefox。macOS側は別リポジトリで同じ固定commitの同期と検証を行います。ReleaseとPagesの更新は未実施です。
+
+
+## 2026-10-05 — 配列2.0.0-beta.5 / 練習帳0.5.0の公開配信確認
+
+- 必須CI `layout-test` 成功後に署名付きの元commitを保持するmerge commitで統合し、Releaseの署名tagを公開commit `fedd175d4d397ec39ed586e369552d8debbf884a` に固定しました。公開後のmainの案内更新では、配列・教材・練習の処理を変えていません。
+- GitHub Pagesは固定9ファイルの `site.zip`（SHA256 `975ca7ceb7e9088a83d8f4352c8c2aa8ddb397ff90f66342e226594bc5bb8c2e`）を指定した手動workflowで配信しました。公開HTTPで取得できる8ファイルすべてが監査済みの内容と一致しました。公式 `actions/upload-pages-artifact@v4` はhidden fileを除外するため、空の `.nojekyll` はサイトZIPに保持され、配信artifactでは省かれます。取得した配信artifactの8ファイルもサイトZIPの対応する内容と一致しました。
+- 公開URLの隔離Chromiumで配列2.0.0-beta.5 / 練習帳0.5.0と11課題を表示し、母音1問の入力・採点と、自由体験欄のD→F→Enterで「たな」になることを確認しました。保存は既定オフで、隔離localStorageは空でした。本人の入力や既存成績は使用していません。
+- 固定配布物とtagは変更せず、公開完了の注記だけをmainで更新します。同梱文書の「公開候補」などは配布物生成時点の記録です。実IME、Safari / Firefox、およびmacOSアプリの今回配列での実入力は、このWeb配信確認には含みません。
