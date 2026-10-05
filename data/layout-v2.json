@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "name": "わから配列 v2",
-  "version": "2.0.0-beta.4",
+  "version": "2.0.0-beta.5",
   "status": "public-beta",
-  "description": "2.0.0-beta.4でんをMの1キー、っをU、Nを単打いぇ・行キーの後のぇ段にし、記号・矢印の規則（Q Qの後の59件とQの後の全角，．／）を廃止した。版を固定して利用し、変更時は配列版を更新する。",
+  "description": "2.0.0-beta.5でDをた行、Fをな行へ入れ替えた。D/Fから始まる20規則を変更し、ほかの151規則は2.0.0-beta.4と同じ。版を固定して利用し、変更時は配列版を更新する。",
   "rules": [
     {
       "id": "e-ka",
@@ -224,128 +224,19 @@
       "group": "kana"
     },
     {
-      "id": "f-ta",
+      "id": "f-na",
       "keys": [
         "f"
       ],
-      "output": "た",
-      "delivery": "romaji",
-      "romaji": "ta",
-      "group": "kana"
-    },
-    {
-      "id": "fh-ta",
-      "keys": [
-        "f",
-        "h"
-      ],
-      "output": "た",
-      "delivery": "romaji",
-      "romaji": "ta",
-      "group": "kana"
-    },
-    {
-      "id": "fk-chi",
-      "keys": [
-        "f",
-        "k"
-      ],
-      "output": "ち",
-      "delivery": "romaji",
-      "romaji": "ti",
-      "group": "kana"
-    },
-    {
-      "id": "fj-tsu",
-      "keys": [
-        "f",
-        "j"
-      ],
-      "output": "つ",
-      "delivery": "romaji",
-      "romaji": "tu",
-      "group": "kana"
-    },
-    {
-      "id": "fsemicolon-te",
-      "keys": [
-        "f",
-        ";"
-      ],
-      "output": "て",
-      "delivery": "romaji",
-      "romaji": "te",
-      "group": "kana"
-    },
-    {
-      "id": "fl-to",
-      "keys": [
-        "f",
-        "l"
-      ],
-      "output": "と",
-      "delivery": "romaji",
-      "romaji": "to",
-      "group": "kana"
-    },
-    {
-      "id": "fp-cha",
-      "keys": [
-        "f",
-        "p"
-      ],
-      "output": "ちゃ",
-      "delivery": "romaji",
-      "romaji": "tya",
-      "group": "kana"
-    },
-    {
-      "id": "fo-chu",
-      "keys": [
-        "f",
-        "o"
-      ],
-      "output": "ちゅ",
-      "delivery": "romaji",
-      "romaji": "tyu",
-      "group": "kana"
-    },
-    {
-      "id": "fi-cho",
-      "keys": [
-        "f",
-        "i"
-      ],
-      "output": "ちょ",
-      "delivery": "romaji",
-      "romaji": "tyo",
-      "group": "kana"
-    },
-    {
-      "id": "fn-che",
-      "keys": [
-        "f",
-        "n"
-      ],
-      "output": "ちぇ",
-      "delivery": "romaji",
-      "romaji": "tye",
-      "group": "kana"
-    },
-    {
-      "id": "d-na",
-      "keys": [
-        "d"
-      ],
       "output": "な",
       "delivery": "romaji",
       "romaji": "na",
       "group": "kana"
     },
     {
-      "id": "dh-na",
+      "id": "fh-na",
       "keys": [
-        "d",
+        "f",
         "h"
       ],
       "output": "な",
@@ -354,9 +245,9 @@
       "group": "kana"
     },
     {
-      "id": "dk-ni",
+      "id": "fk-ni",
       "keys": [
-        "d",
+        "f",
         "k"
       ],
       "output": "に",
@@ -365,9 +256,9 @@
       "group": "kana"
     },
     {
-      "id": "dj-nu",
+      "id": "fj-nu",
       "keys": [
-        "d",
+        "f",
         "j"
       ],
       "output": "ぬ",
@@ -376,9 +267,9 @@
       "group": "kana"
     },
     {
-      "id": "dsemicolon-ne",
+      "id": "fsemicolon-ne",
       "keys": [
-        "d",
+        "f",
         ";"
       ],
       "output": "ね",
@@ -387,9 +278,9 @@
       "group": "kana"
     },
     {
-      "id": "dl-no",
+      "id": "fl-no",
       "keys": [
-        "d",
+        "f",
         "l"
       ],
       "output": "の",
@@ -398,9 +289,9 @@
       "group": "kana"
     },
     {
-      "id": "dp-nya",
+      "id": "fp-nya",
       "keys": [
-        "d",
+        "f",
         "p"
       ],
       "output": "にゃ",
@@ -409,9 +300,9 @@
       "group": "kana"
     },
     {
-      "id": "do-nyu",
+      "id": "fo-nyu",
       "keys": [
-        "d",
+        "f",
         "o"
       ],
       "output": "にゅ",
@@ -420,9 +311,9 @@
       "group": "kana"
     },
     {
-      "id": "di-nyo",
+      "id": "fi-nyo",
       "keys": [
-        "d",
+        "f",
         "i"
       ],
       "output": "にょ",
@@ -431,14 +322,123 @@
       "group": "kana"
     },
     {
-      "id": "dn-nye",
+      "id": "fn-nye",
       "keys": [
-        "d",
+        "f",
         "n"
       ],
       "output": "にぇ",
       "delivery": "romaji",
       "romaji": "nye",
+      "group": "kana"
+    },
+    {
+      "id": "d-ta",
+      "keys": [
+        "d"
+      ],
+      "output": "た",
+      "delivery": "romaji",
+      "romaji": "ta",
+      "group": "kana"
+    },
+    {
+      "id": "dh-ta",
+      "keys": [
+        "d",
+        "h"
+      ],
+      "output": "た",
+      "delivery": "romaji",
+      "romaji": "ta",
+      "group": "kana"
+    },
+    {
+      "id": "dk-chi",
+      "keys": [
+        "d",
+        "k"
+      ],
+      "output": "ち",
+      "delivery": "romaji",
+      "romaji": "ti",
+      "group": "kana"
+    },
+    {
+      "id": "dj-tsu",
+      "keys": [
+        "d",
+        "j"
+      ],
+      "output": "つ",
+      "delivery": "romaji",
+      "romaji": "tu",
+      "group": "kana"
+    },
+    {
+      "id": "dsemicolon-te",
+      "keys": [
+        "d",
+        ";"
+      ],
+      "output": "て",
+      "delivery": "romaji",
+      "romaji": "te",
+      "group": "kana"
+    },
+    {
+      "id": "dl-to",
+      "keys": [
+        "d",
+        "l"
+      ],
+      "output": "と",
+      "delivery": "romaji",
+      "romaji": "to",
+      "group": "kana"
+    },
+    {
+      "id": "dp-cha",
+      "keys": [
+        "d",
+        "p"
+      ],
+      "output": "ちゃ",
+      "delivery": "romaji",
+      "romaji": "tya",
+      "group": "kana"
+    },
+    {
+      "id": "do-chu",
+      "keys": [
+        "d",
+        "o"
+      ],
+      "output": "ちゅ",
+      "delivery": "romaji",
+      "romaji": "tyu",
+      "group": "kana"
+    },
+    {
+      "id": "di-cho",
+      "keys": [
+        "d",
+        "i"
+      ],
+      "output": "ちょ",
+      "delivery": "romaji",
+      "romaji": "tyo",
+      "group": "kana"
+    },
+    {
+      "id": "dn-che",
+      "keys": [
+        "d",
+        "n"
+      ],
+      "output": "ちぇ",
+      "delivery": "romaji",
+      "romaji": "tye",
       "group": "kana"
     },
     {

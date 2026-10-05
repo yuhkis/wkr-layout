@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 728 464" width="728" height="464" font-family="Hiragino Sans, Hiragino Kaku Gothic ProN, Noto Sans JP, Yu Gothic, Meiryo, sans-serif">
-<title>わから配列 2.0.0-beta.4 のキー配置</title>
+<title>わから配列 2.0.0-beta.5 のキー配置</title>
 <rect width="728" height="464" fill="#ffffff"/>
-<text x="20" y="34" font-size="18" font-weight="700" fill="#111827">わから配列 2.0.0-beta.4（JISキーボードの文字キー）</text>
+<text x="20" y="34" font-size="18" font-weight="700" fill="#111827">わから配列 2.0.0-beta.5（JISキーボードの文字キー）</text>
 <rect x="20" y="54" width="58" height="58" rx="8" fill="#bbf7d0" stroke="#6b7280"/>
 <text x="27" y="70" font-size="13" fill="#374151">Q</text>
 <text x="49" y="94" font-size="22" font-weight="700" text-anchor="middle" fill="#111827">ぁ行</text>
@@ -44,10 +44,10 @@
 <text x="129" y="158" font-size="22" font-weight="700" text-anchor="middle" fill="#111827">さ行</text>
 <rect x="164" y="118" width="58" height="58" rx="8" fill="#dbeafe" stroke="#6b7280"/>
 <text x="171" y="134" font-size="13" fill="#374151">D</text>
-<text x="193" y="158" font-size="22" font-weight="700" text-anchor="middle" fill="#111827">な行</text>
+<text x="193" y="158" font-size="22" font-weight="700" text-anchor="middle" fill="#111827">た行</text>
 <rect x="228" y="118" width="58" height="58" rx="8" fill="#dbeafe" stroke="#6b7280"/>
 <text x="235" y="134" font-size="13" fill="#374151">F</text>
-<text x="257" y="158" font-size="22" font-weight="700" text-anchor="middle" fill="#111827">た行</text>
+<text x="257" y="158" font-size="22" font-weight="700" text-anchor="middle" fill="#111827">な行</text>
 <rect x="292" y="118" width="58" height="58" rx="8" fill="#dbeafe" stroke="#6b7280"/>
 <text x="299" y="134" font-size="13" fill="#374151">G</text>
 <text x="321" y="158" font-size="22" font-weight="700" text-anchor="middle" fill="#111827">は行</text>

@@ -2,24 +2,57 @@
 
 | 対象 | 配列版 | 状態 |
 | --- | --- | --- |
-| このリポジトリのJSON・配列表、[配列2.0.0-beta.4のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.4) | 2.0.0-beta.4 | 正本、171規則。ん＝M、っ＝U、N＝いぇ（行キーの後は ぇ の段）、や＝P、記号・矢印の規則なし、特殊列なし |
+| このリポジトリのJSON・配列表 | 2.0.0-beta.5 | 公開候補、171規則。D＝た行・F＝な行。ほかは2.0.0-beta.4と同じ |
+| [配列2.0.0-beta.4のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.4) | 2.0.0-beta.4 | 公開済み、171規則。D＝な行・F＝た行、ん＝M、っ＝U、N＝いぇ（行キーの後は ぇ の段）、や＝P、記号・矢印の規則なし、特殊列なし |
 | [配列2.0.0-beta.3のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.3) | 2.0.0-beta.3 | 以前の仕様zip、220規則。ん＝N・U、っ＝M、や＝P、記号・矢印＝Q Q の後 |
 | [配列2.0.0-beta.2のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.2) | 2.0.0-beta.2 | 以前の仕様zip、233規則。ん＝N、っ＝M、や＝U、記号前置と特殊列＝P |
 | [配列2.0.0-beta.1のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.1) | 2.0.0-beta.1 | 以前の仕様zip。ん＝M、っ＝N |
-| [WKR macOS v2 Public Beta 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) | アプリ0.8.0-public.beta.5 / 配列2.0.0-beta.1 | 固定commitから生成。Apple日本語入力の前段。2.0.0-beta.2〜2.0.0-beta.4への同期は未公開 |
-| 練習帳、[ブラウザデモ](https://yuhkis.github.io/wkr-layout/) | 練習0.4.0 / 配列2.0.0-beta.4 | ブラウザとZIPで同一教材 |
+| [WKR macOS v2 Public Beta 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) | アプリ0.8.0-public.beta.5 / 配列2.0.0-beta.1 | 固定commitから生成。Apple日本語入力の前段。2.0.0-beta.2以降への同期は未公開 |
+| このリポジトリの練習帳 | 練習0.5.0 / 配列2.0.0-beta.5 | 公開候補。ブラウザ・ZIP・macOS向けに同一教材を使用 |
+| 公開済みの[ブラウザデモ](https://yuhkis.github.io/wkr-layout/) | 練習0.4.0 / 配列2.0.0-beta.4 | 2.0.0-beta.5への配信更新は未実施 |
 | macOS同梱の練習帳 | 練習0.1.0 / 配列2.0.0-beta.1 | 0.8.0-public.beta.5に同梱 |
-| v2/ のGoogle日本語入力・azooKey | 2.0.0-beta.4 | 生成・構造検査済み、実IME未確認 |
+| v2/ のGoogle日本語入力・azooKey | 2.0.0-beta.5 | 生成・構造検査済み、実IME未確認 |
 | [WKR macOS 0.7.0 保存ソース](https://github.com/yuhkis/wkr-macos/releases/tag/v0.7.0-archive.1) | 保存版0.7.0-archive.1 / 配列1.1.0 | v1用。現行Public v2とは別 |
 | ルート直下の旧IMEテーブル | 1.1.0 | 旧版の保全。v2導入には使わない |
 
-v1から、が行はA、ぱ行はT、小書きはQ、よ列はI、ゆ列はO、や列はP、長音はYへ変わりました。ん はM、っ はU（v1は ん＝N、っ＝M）で、N は いぇ（行キーの後は ぇ の段）です。記号・矢印の規則はなく、かな漢字変換で入力します。`/` は疑問符、Shift+/ は中点です。Q単打はぁ、QPはゃ、QWはゎです。WJに母音・拗音列を続けるとゔ行になります。
+v1から、た行はD、な行はF、が行はA、ぱ行はT、小書きはQ、よ列はI、ゆ列はO、や列はP、長音はYへ変わりました。ん はM、っ はU（v1は ん＝N、っ＝M）で、N は いぇ（行キーの後は ぇ の段）です。記号・矢印の規則はなく、かな漢字変換で入力します。`/` は疑問符、Shift+/ は中点です。Q単打はぁ、QPはゃ、QWはゎです。WJに母音・拗音列を続けるとゔ行になります。
 
 2打鍵で2かなを出す短縮形（特殊列）は2.0.0-beta.3で廃止しました。ヵ・ヶは直接規則を設けず、かな漢字変換で入力します。かなの網羅性についてv1の検証結果をv2の結果として扱いません。
 
 WKR macOSはJISの物理キーコードを基準にし、かなはローマ字をApple日本語入力へ送ります。2.0.0-beta.3までの記号・矢印の規則は確定文字（Unicode）で送り、未確定文字列がある間は抑止していました。2.0.0-beta.4には確定文字で送る規則はありません。Google日本語入力とazooKeyはテーブル内で出力します。JIS外の記号位置、Googleの保留文字、azooKeyのcomposition-separator / any characterの扱いは実IMEで要確認です。
 
 練習の「キー位置」は指定した綴りを覚える課題です。システム全体の変換やIMEの候補変換は行いません。「日本語入力」では利用者が選んだIMEの確定済みひらがなを比較し、入力途中は採点しません。別解の綴りは日本語入力モードで練習できます。
+
+## 2.0.0-beta.5 での変更
+
+た行を `D`、な行を `F` に入れ替えました。行を選んだ後の段キーは同じです。20規則の出力・ローマ字綴り・規則IDが変わり、残り151規則とキー列の集合・並び順は2.0.0-beta.4のままです。規則数は171件です。個人の使用集計を配布物へ収録せず、公開仕様の変更として説明します。
+
+| キー | 2.0.0-beta.4 | 2.0.0-beta.5 | 規則ID（旧 → 新） |
+| --- | --- | --- | --- |
+| `D` | な | た | `d-na` → `d-ta` |
+| `D ;` | ね | て | `dsemicolon-ne` → `dsemicolon-te` |
+| `D H` | な | た | `dh-na` → `dh-ta` |
+| `D I` | にょ | ちょ | `di-nyo` → `di-cho` |
+| `D J` | ぬ | つ | `dj-nu` → `dj-tsu` |
+| `D K` | に | ち | `dk-ni` → `dk-chi` |
+| `D L` | の | と | `dl-no` → `dl-to` |
+| `D N` | にぇ | ちぇ | `dn-nye` → `dn-che` |
+| `D O` | にゅ | ちゅ | `do-nyu` → `do-chu` |
+| `D P` | にゃ | ちゃ | `dp-nya` → `dp-cha` |
+| `F` | た | な | `f-ta` → `f-na` |
+| `F ;` | て | ね | `fsemicolon-te` → `fsemicolon-ne` |
+| `F H` | た | な | `fh-ta` → `fh-na` |
+| `F I` | ちょ | にょ | `fi-cho` → `fi-nyo` |
+| `F J` | つ | ぬ | `fj-tsu` → `fj-nu` |
+| `F K` | ち | に | `fk-chi` → `fk-ni` |
+| `F L` | と | の | `fl-to` → `fl-no` |
+| `F N` | ちぇ | にぇ | `fn-che` → `fn-nye` |
+| `F O` | ちゅ | にゅ | `fo-chu` → `fo-nyu` |
+| `F P` | ちゃ | にゃ | `fp-cha` → `fp-nya` |
+
+練習帳0.5.0では、目標かなと11課題の構成を保ち、た行・な行を含む教材の綴り、キー図、基本・移行説明を新しい配置へ合わせました。v1からの移行練習は引き続き補助課題です。
+
+配列版ごとに成績の保存先を分けるため、2.0.0-beta.4の成績は自動移行しません。以前の成績は以前の版の保存先に残り、旧版から削除できます。詳しくは[練習帳の保存と削除](../practice/README.md#保存と削除)を参照してください。Google日本語入力・azooKey用テーブルも同じ正本から生成しますが、実IMEでの入力は未確認です。
 
 ## 2.0.0-beta.4 での変更
 

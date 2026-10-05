@@ -1,41 +1,38 @@
 # わから配列 v2 — 公開ベータ
 
 左手で行を、右手で段を選ぶ日本語入力配列です。`W E R` + Enter で「わから」、`E K` で「き」になります。
-このリポジトリが配列仕様と練習教材の正本です。**配列 2.0.0-beta.4 / 練習帳 0.4.0** を提供します。
+このリポジトリが配列仕様と練習教材の正本です。**配列 2.0.0-beta.5 / 練習帳 0.5.0** の公開候補です。現在公開済みの配列とWebデモは2.0.0-beta.4 / 練習帳0.4.0です。
 
-## 2.0.0-beta.4 の配列
+## 2.0.0-beta.5 の配列
 
-![わから配列 2.0.0-beta.4 のキー配置。左手の15キーが行（か行・さ行など）、右手の H K J ; L が あいうえお段、P O I N が ゃゅょぇ段（単打で や ゆ よ いぇ）、M が ん、U が っ、Y が ー](docs/images/keymap-v2.svg)
+![わから配列 2.0.0-beta.5 のキー配置。左手の15キーが行（か行・さ行など）、右手の H K J ; L が あいうえお段、P O I N が ゃゅょぇ段（単打で や ゆ よ いぇ）、M が ん、U が っ、Y が ー](docs/images/keymap-v2.svg)
 
-- **左手のキーは行**です。単打でその行のあ段になります（`E` か、`S` さ、`A` が、`T` ぱ、`X` ふぁ、`Q` ぁ）。
+- **左手のキーは行**です。単打でその行のあ段になります（`E` か、`S` さ、`D` た、`F` な、`A` が、`T` ぱ、`X` ふぁ、`Q` ぁ）。
 - **右手の `H` `K` `J` `;` `L` と `P` `O` `I` `N` は段**です。行キーの後の `H` `K` `J` `;` `L` で あいうえお段、`P` `O` `I` `N` で ゃ ゅ ょ ぇ の段になります（`E K` き、`E P` きゃ、`E I` きょ、`S N` しぇ）。単打では あ い う え お と や ゆ よ いぇ です。
 - **`M` は ん、`U` は っ**、`Y` は ー、`/` は ？、Shift+`/` は ・ です。行キーの後に打つと、行のあ段を確定してから続きます（`E M` かん、`E U` かっ、`E Y` かー）。
 - 小書きは `Q` の行（`Q K` ぃ、`Q P` ゃ、`Q W` ゎ）、ゔ は `W J` の行（`W J H` ゔぁ）です。**記号・矢印の規則はありません**。IMEのかな漢字変換で入力します。
 
 すべての組み合わせは[配列表](docs/layout-v2.md)の「行と段の組み合わせ」（五十音順の表）と「全規則」にあります。
 
-### 2.0.0-beta.3 からの変更
+### 2.0.0-beta.4 からの変更
 
-| キー | 2.0.0-beta.3 | **2.0.0-beta.4** |
+| 行キー | 2.0.0-beta.4 | **2.0.0-beta.5** |
 | --- | --- | --- |
-| `M` | っ | **ん**（2.0.0-beta.1 と同じ位置） |
-| `U` | ん | **っ** |
-| `N` | ん | **いぇ**。行キーの後は ぇ の段（`E N` きぇ、`S N` しぇ、`F N` ちぇ） |
-| 記号・矢印 | `Q` `Q` の後に1打（59規則）、`Q` の後の ， ． ／ | **廃止**。変換で入力する（`Q Q` は ぁぁ） |
+| `D` | な行 | **た行**（単打 た、`D K` ち、`D P` ちゃ、`D N` ちぇ） |
+| `F` | た行 | **な行**（単打 な、`F K` に、`F P` にゃ、`F N` にぇ） |
 
-ほかのキーは2.0.0-beta.3と同じです（`P` や、`I` よ、`O` ゆ、`Y` ー、`/` ？、が行 `A`、ぱ行 `T`、小書き `Q`）。規則は220から171になりました。
-2.0.0-beta.2 からは、これに加えて `U` の や を `P` へ移し、行キーの後の `P` の特殊列（こと・です など）を廃止しています。
-変更の理由と規則IDの対応は[v2の対応と違い](docs/compatibility.md#200-beta4-での変更)にあります。
+D/Fの行全体を入れ替え、20規則とその規則IDを変更しました。ほかの151規則、段キー、小書き・ゔの規則は2.0.0-beta.4と同じです。規則数は171のままです。
+変更の詳細と規則IDは[v2の対応と違い](docs/compatibility.md#200-beta5-での変更)にあります。以前の版を使っている方は、練習帳と実際の入力側の配列版をそろえてください。
 
 **[ブラウザでわから配列を体験する](https://yuhkis.github.io/wkr-layout/)** — アプリのインストール不要。ABC・英数で、いつものQWERTYキーボードから試せます。
 
-[配列2.0.0-beta.4の配布zipとSHA256SUMS](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.4)は公式Releaseにあります。以前の[2.0.0-beta.3](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.3)（ん＝N・U、っ＝M、記号・矢印＝Q Qの後、練習帳0.3.0）、[2.0.0-beta.2](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.2)（U＝や、P＝記号前置と特殊列、練習帳0.2.1）と[2.0.0-beta.1](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.1)（ん＝M、っ＝N、練習帳0.1.0）のReleaseも残しています。練習帳は0.2.0でQWERTY体験を追加しました。
+公開済みの[配列2.0.0-beta.4の配布zipとSHA256SUMS](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.4)は公式Releaseにあります。2.0.0-beta.5の配布物・Webデモは公開準備中です。以前の[2.0.0-beta.3](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.3)（ん＝N・U、っ＝M、記号・矢印＝Q Qの後、練習帳0.3.0）、[2.0.0-beta.2](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.2)（U＝や、P＝記号前置と特殊列、練習帳0.2.1）と[2.0.0-beta.1](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.1)（ん＝M、っ＝N、練習帳0.1.0）のReleaseも残しています。練習帳は0.2.0でQWERTY体験を追加しました。
 
 ## 初めて使う方へ
 
 1. [ブラウザデモ](https://yuhkis.github.io/wkr-layout/)を開き、ABC・英数に切り替えて「QWERTYで体験」を選びます。Hで「あ」、E→Kで「き」を入力できます。WKR導入済みの方は「WKR・IMEで練習」を選び、普段のひらがな入力でも練習できます。
 2. [配列表](docs/layout-v2.md)で基本キーを確認します。練習は母音・行キーから短文へ進みます。
-3. 実際の文章入力には [WKR macOS v2 Public Beta 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) とApple日本語入力を使います。このアプリは配列2.0.0-beta.1（ん＝M、っ＝N、U＝や、P＝記号前置）のままで、2.0.0-beta.4に対応した版は未公開です。[実装の違い](docs/compatibility.md)も確認してください。
+3. 実際の文章入力には [WKR macOS v2 Public Beta 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) とApple日本語入力を使います。このアプリは配列2.0.0-beta.1（ん＝M、っ＝N、U＝や、P＝記号前置）のままで、2.0.0-beta.5に対応した版は公開準備中です。[実装の違い](docs/compatibility.md)も確認してください。
 
 練習アプリは既定では成績を保存しません。「成績をこの端末に保存」を有効にした場合だけ課題別の完了回数・最高正答率を保存します。入力本文・誤入力・キー列・時刻は保存しません。[保存と削除](practice/README.md)を参照してください。
 
@@ -67,7 +64,7 @@ node --test practice/*.test.cjs
 
 使い方と構成は [scripts/README.md](scripts/README.md)、教材とブラウザ版は [practice/README.md](practice/README.md)へ。
 教材を変えたら練習版、規則を変えたら配列版を更新し、WKR macOS側の同期スクリプトで固定commitから取り込みます。
-[公開ベータの検証記録](docs/verification.md)と[Release文案](docs/release-2.0.0-beta.4.md)に確認範囲を残します。
+[公開ベータの検証記録](docs/verification.md)と[Release文案](docs/release-2.0.0-beta.5.md)に確認範囲を残します。
 
 MIT License — [LICENSE](LICENSE)。背景と従来版の説明は[v1資料](docs/v1.md)に残しています。
 

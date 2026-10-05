@@ -30,3 +30,9 @@ test('QWERTY positions, Shift symbols and composition/shortcut exclusion',()=>{
  assert.equal(token({code:'Digit1',key:'!',shiftKey:true}),'Shift+1');
  for(const flag of ['metaKey','ctrlKey','altKey','isComposing'])assert.equal(token({code:'KeyH',key:'h',[flag]:true}),null);
 });
+
+test('D/F rows, provisional replacement and fallback use the beta.5 layout',()=>{
+ const e=create(data.rules);assert.equal(e.feed('d'),'た');assert.equal(e.feed('k'),'ち');
+ e.reset();assert.equal(e.feed('f'),'な');assert.equal(e.feed('k'),'に');
+ e.reset();for(const k of 'dfdnfn')e.feed(k);assert.equal(e.flush(),'たなちぇにぇ');
+});
