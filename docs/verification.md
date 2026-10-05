@@ -130,3 +130,16 @@ Google日本語入力とazooKeyのテーブルは別の入力経路です。Appl
 - GitHub Pagesは固定9ファイルの `site.zip`（SHA256 `975ca7ceb7e9088a83d8f4352c8c2aa8ddb397ff90f66342e226594bc5bb8c2e`）を指定した手動workflowで配信しました。公開HTTPで取得できる8ファイルすべてが監査済みの内容と一致しました。公式 `actions/upload-pages-artifact@v4` はhidden fileを除外するため、空の `.nojekyll` はサイトZIPに保持され、配信artifactでは省かれます。取得した配信artifactの8ファイルもサイトZIPの対応する内容と一致しました。
 - 公開URLの隔離Chromiumで配列2.0.0-beta.5 / 練習帳0.5.0と11課題を表示し、母音1問の入力・採点と、自由体験欄のD→F→Enterで「たな」になることを確認しました。保存は既定オフで、隔離localStorageは空でした。本人の入力や既存成績は使用していません。
 - 固定配布物とtagは変更せず、公開完了の注記だけをmainで更新します。同梱文書の「公開候補」などは配布物生成時点の記録です。実IME、Safari / Firefox、およびmacOSアプリの今回配列での実入力は、このWeb配信確認には含みません。
+
+
+## 2026-10-05 — 練習帳0.5.1のIME採点操作の修正候補
+
+- 配列版は2.0.0-beta.5のままです。正本JSON・171規則・配列表・キー図・IMEテーブル・`lessons.json`（11課題120問）のバイトが0.5.0と同じことを照合しました。生成した `data.js` の差分は練習版0.5.0→0.5.1だけです。公開済みtag・仕様ZIP・練習ZIP・Webは更新していません。
+- `app.js` の確定後の保留は、識別されたEnterとその離れで扱います。keyupがcompositionendの前に来た場合も、確定Enterで採点せず次の明示Enterで採点する順序を検査しました。Enter / NumpadEnter / keyCode 13と、keyがProcessでもcodeがEnterのイベントを対象にします。識別不能な229だけで保留を解除しません。曖昧な順序には確定後の「採点」ボタンを追加しました。
+- 生成一致、Python 12件、Node 28件（actual `app.js` の合成DOMイベント18件を含む）、公開ガードの合成検査22件が成功しました。DOM検査には、確定キーのdown / upとcompositionendの前後、stale isComposing、未知229、候補選択後の継続入力、repeat・shortcut除外、課題・モード・ページ終了時のリセット、二重完了の防止、入力本文やIME状態を保存・連携へ渡さないことを含みます。
+- 別のレビュー担当がactual `app.js` とDOM試験を読み直し、18件の成功を再確認しました。実IMEでのイベント順序を記録した試験ではありません。
+- localhostの固定9ファイルをPlaywright CLIの隔離Chromium 154で操作しました。QWERTY体験の母音9問をEnterとボタンの両方で採点し、合成誤答は消去、90%・100%の集計になりました。合成compositionの入力途中・確定用Enterでは採点せず、releaseがendより前にある順序の次Enterで採点しました。識別不能な229の順序ではEnterを保留し、確定後のボタンで採点できました。
+- 保存は初期状態でオフで、明示有効化後は配列版・課題ID・完了回数・最高正答率だけが残りました。再読込で復元し、削除後の再読込では保存オフ・データなしを確認しました。幅390pxでも3ボタンが画面内に収まりました。観測した通信はlocalhostの静的GETだけで、consoleのエラー・警告は0件でした。本人の入力や既存成績は使用していません。
+- 別のin-app browserでも、QWERTY HとIMEモードの直接入力した合成かなを「採点」で提出し、正答・次へ有効・採点無効を確認しました。保存オフ、エラー・警告0件でした。これは実IMEの確認ではありません。
+
+未確認: この版を同梱したWKWebViewと実機WKR・Apple日本語入力、Google日本語入力・azooKey、Safari / Firefox。確定キーの識別や離れが欠ける場合、release後のcompositionupdateなどでは保守的にEnter採点を保留します。すべてのIMEで同じEnter回数になることは保証せず、確定後のボタンを案内します。公開前のGitHub全表面・最終配布物監査と公開承認は別に行います。

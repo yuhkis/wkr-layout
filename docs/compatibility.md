@@ -8,7 +8,7 @@
 | [配列2.0.0-beta.2のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.2) | 2.0.0-beta.2 | 以前の仕様zip、233規則。ん＝N、っ＝M、や＝U、記号前置と特殊列＝P |
 | [配列2.0.0-beta.1のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.1) | 2.0.0-beta.1 | 以前の仕様zip。ん＝M、っ＝N |
 | [WKR macOS v2 Public Beta 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) | アプリ0.8.0-public.beta.5 / 配列2.0.0-beta.1 | 固定commitから生成。Apple日本語入力の前段。2.0.0-beta.2以降への同期は未公開 |
-| このリポジトリの練習帳 | 練習0.5.0 / 配列2.0.0-beta.5 | 公開済み。ブラウザ・ZIPは同一教材。macOS向けにも同じソースを使用可能 |
+| このリポジトリの練習帳 | 練習0.5.1候補 / 配列2.0.0-beta.5 | 採点操作の修正を準備中。公開Webと0.5.0添付は未更新。171規則・11課題120問は0.5.0と同じ |
 | 公開済みの[ブラウザデモ](https://yuhkis.github.io/wkr-layout/) | 練習0.5.0 / 配列2.0.0-beta.5 | Releaseと同じ規則・教材。サイト生成物9ファイルのうちWeb本文8ファイルを配信 |
 | macOS同梱の練習帳 | 練習0.1.0 / 配列2.0.0-beta.1 | 0.8.0-public.beta.5に同梱 |
 | v2/ のGoogle日本語入力・azooKey | 2.0.0-beta.5 | 生成・構造検査済み、実IME未確認 |
@@ -21,7 +21,7 @@ v1から、た行はD、な行はF、が行はA、ぱ行はT、小書きはQ、�
 
 WKR macOSはJISの物理キーコードを基準にし、かなはローマ字をApple日本語入力へ送ります。2.0.0-beta.3までの記号・矢印の規則は確定文字（Unicode）で送り、未確定文字列がある間は抑止していました。2.0.0-beta.4には確定文字で送る規則はありません。Google日本語入力とazooKeyはテーブル内で出力します。JIS外の記号位置、Googleの保留文字、azooKeyのcomposition-separator / any characterの扱いは実IMEで要確認です。
 
-練習の「キー位置」は指定した綴りを覚える課題です。システム全体の変換やIMEの候補変換は行いません。「日本語入力」では利用者が選んだIMEの確定済みひらがなを比較し、入力途中は採点しません。別解の綴りは日本語入力モードで練習できます。
+練習の「キー位置」は指定した綴りを覚える課題です。システム全体の変換やIMEの候補変換は行いません。「日本語入力」では利用者が選んだIMEの確定済みひらがなを比較し、入力途中は採点しません。0.5.1候補では確定キーの識別・離れを処理し、曖昧なEnter順序は採点を保留して「採点」ボタンを利用できます。実IMEでの互換性やEnter回数の全面的な保証ではありません。別解の綴りは日本語入力モードで練習できます。
 
 ## 2.0.0-beta.5 での変更
 

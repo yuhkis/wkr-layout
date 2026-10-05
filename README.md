@@ -3,6 +3,8 @@
 左手で行を、右手で段を選ぶ日本語入力配列です。`W E R` + Enter で「わから」、`E K` で「き」になります。
 このリポジトリが配列仕様と練習教材の正本です。**配列 2.0.0-beta.5 / 練習帳 0.5.0** を公開しています。Webデモも同じ配列・教材です。
 
+このソースでは**練習帳 0.5.1 の候補**を準備しています。IME確定後のEnterの扱いを改善し、明示的な「採点」ボタンを追加しました。配列2.0.0-beta.5の171規則と11課題120問の教材は変更していません。0.5.1のZIP・Release・Web更新は未公開です。[変更と確認範囲](docs/release-practice-0.5.1.md)を参照してください。
+
 ## 2.0.0-beta.5 の配列
 
 ![わから配列 2.0.0-beta.5 のキー配置。左手の15キーが行（か行・さ行など）、右手の H K J ; L が あいうえお段、P O I N が ゃゅょぇ段（単打で や ゆ よ いぇ）、M が ん、U が っ、Y が ー](docs/images/keymap-v2.svg)
@@ -28,7 +30,7 @@ D/Fの行全体を入れ替え、20規則とその規則IDを変更しました�
 
 [配列2.0.0-beta.5・練習帳0.5.0の配布zipとSHA256SUMS](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.5)は公式Releaseにあります。以前の[2.0.0-beta.4](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.4)（D＝な行・F＝た行、練習帳0.4.0）、[2.0.0-beta.3](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.3)（ん＝N・U、っ＝M、記号・矢印＝Q Qの後、練習帳0.3.0）、[2.0.0-beta.2](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.2)（U＝や、P＝記号前置と特殊列、練習帳0.2.1）と[2.0.0-beta.1](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.1)（ん＝M、っ＝N、練習帳0.1.0）のReleaseも残しています。練習帳は0.2.0でQWERTY体験を追加しました。
 
-Releaseの署名tag `v2.0.0-beta.5` と添付は、監査済みの公開commit `fedd175d4d397ec39ed586e369552d8debbf884a` に固定しています。mainでは公開完了後の案内だけを更新し、配列171規則・教材・練習の処理は変えていません。添付内の文書は生成時点の記録で、「公開候補」などの注記を含みます。現在の公開状況はこのREADMEと公式Releaseで確認してください。
+Releaseの署名tag `v2.0.0-beta.5` と添付は、監査済みの公開commit `fedd175d4d397ec39ed586e369552d8debbf884a` に固定しています。公開済みの0.5.0の配列171規則・教材・配布物は変更していません。このソースの0.5.1候補は、同じ配列・教材で採点操作だけを更新します。添付内の文書は生成時点の記録で、「公開候補」などの注記を含みます。現在の公開状況はこのREADMEと公式Releaseで確認してください。
 
 ## 初めて使う方へ
 
@@ -66,7 +68,7 @@ node --test practice/*.test.cjs
 
 使い方と構成は [scripts/README.md](scripts/README.md)、教材とブラウザ版は [practice/README.md](practice/README.md)へ。
 教材を変えたら練習版、規則を変えたら配列版を更新し、WKR macOS側の同期スクリプトで固定commitから取り込みます。
-[公開ベータの検証記録](docs/verification.md)と[Release情報](docs/release-2.0.0-beta.5.md)に確認範囲を残します。
+[公開ベータの検証記録](docs/verification.md)、[配列のRelease情報](docs/release-2.0.0-beta.5.md)、[練習帳0.5.1候補の変更](docs/release-practice-0.5.1.md)に確認範囲を残します。
 
 MIT License — [LICENSE](LICENSE)。背景と従来版の説明は[v1資料](docs/v1.md)に残しています。
 
