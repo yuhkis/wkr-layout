@@ -9,7 +9,7 @@
 | [配列2.0.0-beta.1のRelease](https://github.com/yuhkis/wkr-layout/releases/tag/v2.0.0-beta.1) | 2.0.0-beta.1 | 以前の仕様zip。ん＝M、っ＝N |
 | [WKR macOS v2 Public Beta 0.8.0-public.beta.5](https://github.com/yuhkis/wkr-macos/releases/tag/v0.8.0-public.beta.5) | アプリ0.8.0-public.beta.5 / 配列2.0.0-beta.1 | 固定commitから生成。Apple日本語入力の前段。2.0.0-beta.2以降への同期は未公開 |
 | このリポジトリの練習帳 | 練習0.5.0 / 配列2.0.0-beta.5 | 公開済み。ブラウザ・ZIPは同一教材。macOS向けにも同じソースを使用可能 |
-| 公開済みの[ブラウザデモ](https://yuhkis.github.io/wkr-layout/) | 練習0.5.0 / 配列2.0.0-beta.5 | Releaseと同じ規則・教材の固定9ファイルを配信 |
+| 公開済みの[ブラウザデモ](https://yuhkis.github.io/wkr-layout/) | 練習0.5.0 / 配列2.0.0-beta.5 | Releaseと同じ規則・教材。サイト生成物9ファイルのうちWeb本文8ファイルを配信 |
 | macOS同梱の練習帳 | 練習0.1.0 / 配列2.0.0-beta.1 | 0.8.0-public.beta.5に同梱 |
 | v2/ のGoogle日本語入力・azooKey | 2.0.0-beta.5 | 生成・構造検査済み、実IME未確認 |
 | [WKR macOS 0.7.0 保存ソース](https://github.com/yuhkis/wkr-macos/releases/tag/v0.7.0-archive.1) | 保存版0.7.0-archive.1 / 配列1.1.0 | v1用。現行Public v2とは別 |
