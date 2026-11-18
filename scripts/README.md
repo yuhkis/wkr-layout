@@ -2,6 +2,8 @@
 
 `python3 scripts/generate.py` は `data/layout-v2.json` と `practice/lessons.json`、`practice/VERSION` から配列表、v2のIMEテーブル、練習の `data.js` を生成します。`--check` は書き換えず一致を検査します。依存はPython標準ライブラリだけです。
 
+`node --test practice/*.test.cjs` は変換・集計保存に加え、配布する `app.js` を合成DOMで動かす `app.test.cjs` のIME確定境界・採点ボタン・二重採点防止を検査します。実IMEのイベントを記録した試験ではありません。
+
 規則のキー列・ID重複を拒否し、教材の綴りは最長一致モデルで再変換して対象かなと照合します。規則の出力と綴りに私的な実測値やログを混ぜないでください。
 
 公開配布は `python3 scripts/package.py`。練習帳のzipと、まだReleaseしていない配列版の仕様zip（配列JSON・配列表・IMEテーブル・文書・その版の `docs/release-<配列版>.md`）を、`build/distribution/<commit>/`へ `manifest.json`・`SHA256SUMS` とともに出力します。既存候補は別のcommitの出力先に保持します。Gitの履歴をzipへ含めず、含めるパスを固定します。公開前に `docs/verification.md` の未確認事項を見直します。
